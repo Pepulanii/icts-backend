@@ -1,0 +1,76 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mis",
+  "info": {
+    "name": "MIS",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "institution": {
+      "model": "institution",
+      "via": "mis"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Launch": {
+      "type": "date"
+    },
+    "agency": {
+      "model": "agency",
+      "via": "mis"
+    },
+    "Serial": {
+      "type": "string"
+    },
+    "Location": {
+      "type": "text"
+    },
+    "Platform": {
+      "type": "string"
+    },
+    "Developer": {
+      "type": "string"
+    },
+    "SourceCode": {
+      "type": "string"
+    },
+    "LicencingCost": {
+      "type": "float"
+    },
+    "AnnualRevenue": {
+      "type": "float"
+    },
+    "Users": {
+      "type": "biginteger"
+    },
+    "url": {
+      "type": "string"
+    },
+    "Access": {
+      "type": "string"
+    },
+    "ServiceType": {
+      "type": "string"
+    },
+    "SysType": {
+      "type": "string"
+    },
+    "Mobile": {
+      "type": "string"
+    },
+    "Status": {
+      "type": "string"
+    }
+  }
+}

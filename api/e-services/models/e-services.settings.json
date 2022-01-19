@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "e_services",
+  "info": {
+    "name": "E Service",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "URL": {
+      "type": "string"
+    },
+    "Status": {
+      "type": "enumeration",
+      "enum": [
+        "Online",
+        "Offline",
+        "Proposal"
+      ]
+    },
+    "Launch": {
+      "type": "date"
+    }
+  }
+}

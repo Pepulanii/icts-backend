@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "institutions",
+  "info": {
+    "name": "Institution"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Moto": {
+      "type": "text"
+    },
+    "Vision": {
+      "type": "text"
+    },
+    "Statement": {
+      "type": "text"
+    },
+    "mis": {
+      "via": "institution",
+      "collection": "mis"
+    }
+  }
+}
