@@ -17,8 +17,8 @@
       "required": true
     },
     "institution": {
-      "model": "institution",
-      "via": "mis"
+      "via": "mis",
+      "model": "institution"
     },
     "Description": {
       "type": "text"

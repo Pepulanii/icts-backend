@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "institutions",
   "info": {
-    "name": "Institution"
+    "name": "Institution",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -15,18 +16,21 @@
       "type": "string",
       "required": true
     },
-    "Moto": {
+    "Mandate": {
       "type": "text"
     },
     "Vision": {
       "type": "text"
     },
-    "Statement": {
+    "Mission": {
       "type": "text"
     },
     "mis": {
       "via": "institution",
       "collection": "mis"
+    },
+    "website": {
+      "type": "string"
     }
   }
 }
