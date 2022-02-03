@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "e_services",
   "info": {
-    "name": "E Service",
+    "name": "EService",
     "description": ""
   },
   "options": {
@@ -13,24 +13,29 @@
   "pluginOptions": {},
   "attributes": {
     "Name": {
-      "type": "string"
+      "type": "text"
     },
     "Description": {
       "type": "text"
     },
-    "URL": {
-      "type": "string"
+    "institution": {
+      "via": "e_services",
+      "model": "institution"
     },
     "Status": {
       "type": "enumeration",
       "enum": [
-        "Online",
-        "Offline",
-        "Proposal"
-      ]
+        "OPERATIONAL",
+        "OFFLINE"
+      ],
+      "default": "OPERATIONAL"
     },
-    "Launch": {
-      "type": "date"
+    "url": {
+      "type": "string"
+    },
+    "mi": {
+      "via": "e_services",
+      "model": "mis"
     }
   }
 }

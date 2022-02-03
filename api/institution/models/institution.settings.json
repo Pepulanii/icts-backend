@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "institutions",
   "info": {
-    "name": "Institution",
+    "name": "institution",
     "description": ""
   },
   "options": {
@@ -31,6 +31,14 @@
     },
     "website": {
       "type": "string"
+    },
+    "e_services": {
+      "via": "institution",
+      "collection": "e-services"
+    },
+    "mobile_services": {
+      "via": "institution",
+      "collection": "mobile-services"
     }
   }
 }

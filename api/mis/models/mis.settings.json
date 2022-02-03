@@ -26,10 +26,6 @@
     "Launch": {
       "type": "date"
     },
-    "agency": {
-      "model": "agency",
-      "via": "mis"
-    },
     "Serial": {
       "type": "string"
     },
@@ -71,6 +67,14 @@
     },
     "Status": {
       "type": "string"
+    },
+    "agency": {
+      "via": "mis",
+      "model": "agency"
+    },
+    "e_services": {
+      "via": "mi",
+      "collection": "e-services"
     }
   }
 }

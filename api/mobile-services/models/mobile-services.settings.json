@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mobile_services",
+  "info": {
+    "name": "Mobile-Services",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "text"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "ussd": {
+      "type": "string"
+    },
+    "Year": {
+      "type": "date"
+    },
+    "institution": {
+      "via": "mobile_services",
+      "model": "institution"
+    }
+  }
+}
