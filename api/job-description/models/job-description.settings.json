@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "job_descriptions",
+  "info": {
+    "name": "JobDescription",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "KeyResultArea": {
+      "type": "string"
+    },
+    "PrincipalAccountability": {
+      "type": "text"
+    }
+  }
+}

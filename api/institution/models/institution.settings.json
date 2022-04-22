@@ -39,6 +39,9 @@
     "mobile_services": {
       "via": "institution",
       "collection": "mobile-services"
+    },
+    "phone": {
+      "type": "string"
     }
   }
 }
