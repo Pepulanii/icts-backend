@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_description_challenges",
+  "info": {
+    "name": "challenges",
+    "icon": "exclamation"
+  },
+  "options": {},
+  "attributes": {
+    "description": {
+      "type": "text"
+    }
+  }
+}

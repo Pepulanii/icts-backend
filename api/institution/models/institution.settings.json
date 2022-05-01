@@ -42,6 +42,10 @@
     },
     "phone": {
       "type": "string"
+    },
+    "proposed_systems": {
+      "via": "institution",
+      "collection": "proposed-systems"
     }
   }
 }

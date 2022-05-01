@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "proposed_systems",
+  "info": {
+    "name": "ProposedSystems",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "features": {
+      "type": "component",
+      "repeatable": true,
+      "component": "description.features"
+    },
+    "userType": {
+      "type": "string"
+    },
+    "serviceType": {
+      "type": "string"
+    },
+    "access": {
+      "type": "string"
+    },
+    "objective": {
+      "type": "text"
+    },
+    "institution": {
+      "model": "institution",
+      "via": "proposed_systems"
+    },
+    "challenges": {
+      "type": "component",
+      "repeatable": true,
+      "component": "description.challenges"
+    },
+    "misAvailable": {
+      "type": "string"
+    }
+  }
+}
