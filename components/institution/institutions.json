@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_institution_institutions",
+  "info": {
+    "name": "institutions",
+    "icon": "archway"
+  },
+  "options": {},
+  "attributes": {
+    "institutions": {
+      "collection": "institution"
+    }
+  }
+}

@@ -16,6 +16,10 @@
     },
     "website": {
       "type": "string"
+    },
+    "team": {
+      "via": "provinces",
+      "model": "teams"
     }
   }
 }

@@ -46,6 +46,10 @@
     "proposed_systems": {
       "via": "institution",
       "collection": "proposed-systems"
+    },
+    "team": {
+      "via": "institutions",
+      "model": "teams"
     }
   }
 }

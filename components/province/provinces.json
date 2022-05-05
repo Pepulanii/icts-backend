@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_province_provinces",
+  "info": {
+    "name": "Provinces",
+    "icon": "file",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "provinces": {
+      "collection": "provinces"
+    }
+  }
+}

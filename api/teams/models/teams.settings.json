@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "teams",
+  "info": {
+    "name": "Teams",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "institutions": {
+      "collection": "institution",
+      "via": "team"
+    },
+    "provinces": {
+      "collection": "provinces",
+      "via": "team"
+    }
+  }
+}
