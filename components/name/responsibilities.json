@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_name_responsibilities",
+  "info": {
+    "name": "Responsibilities",
+    "icon": "air-freshener"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

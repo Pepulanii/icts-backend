@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sections",
+  "info": {
+    "name": "Section",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "purpose": {
+      "type": "text"
+    },
+    "institution": {
+      "model": "institution",
+      "via": "sections"
+    },
+    "job_descriptions": {
+      "via": "section",
+      "collection": "job-description"
+    }
+  }
+}

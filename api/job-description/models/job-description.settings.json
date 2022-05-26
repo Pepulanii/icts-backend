@@ -12,11 +12,50 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "KeyResultArea": {
+    "JobTitle": {
       "type": "string"
     },
-    "PrincipalAccountability": {
+    "Grade": {
+      "type": "string"
+    },
+    "institution": {
+      "model": "institution",
+      "via": "job_descriptions"
+    },
+    "section": {
+      "model": "section",
+      "via": "job_descriptions"
+    },
+    "JobPurpose": {
       "type": "text"
+    },
+    "reports_to": {
+      "model": "job-description"
+    },
+    "Responsibilities": {
+      "type": "component",
+      "repeatable": true,
+      "component": "name.responsibilities"
+    },
+    "minimum_education": {
+      "type": "text"
+    },
+    "minimum_vocational": {
+      "type": "string"
+    },
+    "pre_job_experience": {
+      "type": "integer"
+    },
+    "written_skills": {
+      "type": "text"
+    },
+    "oral_skills": {
+      "type": "text"
+    },
+    "user": {
+      "via": "job_description",
+      "plugin": "users-permissions",
+      "model": "user"
     }
   }
 }

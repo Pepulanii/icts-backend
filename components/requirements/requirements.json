@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_requirements_requirements",
+  "info": {
+    "name": "Requirements",
+    "icon": "align-justify"
+  },
+  "options": {},
+  "attributes": {
+    "minimum_education": {
+      "type": "text"
+    },
+    "minimum_vocational": {
+      "type": "text"
+    },
+    "pre_job_experience": {
+      "type": "integer"
+    }
+  }
+}

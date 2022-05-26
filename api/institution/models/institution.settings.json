@@ -50,6 +50,14 @@
     "team": {
       "via": "institutions",
       "model": "teams"
+    },
+    "job_descriptions": {
+      "via": "institution",
+      "collection": "job-description"
+    },
+    "sections": {
+      "via": "institution",
+      "collection": "section"
     }
   }
 }
