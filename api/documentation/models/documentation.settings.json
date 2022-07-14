@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "documentations",
+  "info": {
+    "name": "Documentation",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "mi": {
+      "via": "documentations",
+      "model": "mis"
+    },
+    "Category": {
+      "type": "string"
+    },
+    "DocId": {
+      "type": "integer"
+    }
+  }
+}

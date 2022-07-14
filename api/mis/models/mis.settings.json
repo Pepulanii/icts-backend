@@ -75,6 +75,22 @@
     "e_services": {
       "via": "mi",
       "collection": "e-services"
+    },
+    "documentations": {
+      "via": "mi",
+      "collection": "documentation"
+    },
+    "doc": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
     }
   }
 }
