@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_description_features2s",
+  "info": {
+    "name": "features2",
+    "icon": "align-center"
+  },
+  "options": {},
+  "attributes": {
+    "description": {
+      "type": "string"
+    },
+    "priority": {
+      "type": "string"
+    }
+  }
+}

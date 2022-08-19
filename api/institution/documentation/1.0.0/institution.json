@@ -736,9 +736,6 @@
                 "description": {
                   "type": "string"
                 },
-                "features": {
-                  "type": "component"
-                },
                 "userType": {
                   "type": "string"
                 },
@@ -754,11 +751,14 @@
                 "institution": {
                   "type": "string"
                 },
-                "challenges": {
-                  "type": "component"
-                },
                 "misAvailable": {
                   "type": "string"
+                },
+                "features": {
+                  "type": "component"
+                },
+                "challenges": {
+                  "type": "component"
                 },
                 "published_at": {
                   "type": "string"

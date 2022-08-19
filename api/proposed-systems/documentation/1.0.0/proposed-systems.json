@@ -541,26 +541,6 @@
           "description": {
             "type": "string"
           },
-          "features": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "priority": {
-                  "type": "string"
-                }
-              }
-            }
-          },
           "userType": {
             "type": "string"
           },
@@ -650,38 +630,7 @@
               }
             }
           },
-          "challenges": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                }
-              }
-            }
-          },
           "misAvailable": {
-            "type": "string"
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
-          }
-        }
-      },
-      "NewProposed-systems": {
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "description": {
             "type": "string"
           },
           "features": {
@@ -704,21 +653,6 @@
               }
             }
           },
-          "userType": {
-            "type": "string"
-          },
-          "serviceType": {
-            "type": "string"
-          },
-          "access": {
-            "type": "string"
-          },
-          "objective": {
-            "type": "string"
-          },
-          "institution": {
-            "type": "string"
-          },
           "challenges": {
             "type": "array",
             "items": {
@@ -736,8 +670,74 @@
               }
             }
           },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "NewProposed-systems": {
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "userType": {
+            "type": "string"
+          },
+          "serviceType": {
+            "type": "string"
+          },
+          "access": {
+            "type": "string"
+          },
+          "objective": {
+            "type": "string"
+          },
+          "institution": {
+            "type": "string"
+          },
           "misAvailable": {
             "type": "string"
+          },
+          "features": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "priority": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "challenges": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                }
+              }
+            }
           },
           "published_at": {
             "type": "string",
