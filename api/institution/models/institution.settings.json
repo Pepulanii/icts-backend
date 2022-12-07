@@ -58,6 +58,10 @@
     "sections": {
       "via": "institution",
       "collection": "section"
+    },
+    "msites": {
+      "via": "institution",
+      "collection": "msites"
     }
   }
 }

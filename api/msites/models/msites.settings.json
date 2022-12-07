@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "msites",
+  "info": {
+    "name": "Msites"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "institution": {
+      "model": "institution",
+      "via": "msites"
+    }
+  }
+}
