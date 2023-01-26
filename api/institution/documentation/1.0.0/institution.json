@@ -760,6 +760,15 @@
                 "challenges": {
                   "type": "component"
                 },
+                "proposed_sys_comments": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "status": {
+                  "type": "string"
+                },
                 "published_at": {
                   "type": "string"
                 },

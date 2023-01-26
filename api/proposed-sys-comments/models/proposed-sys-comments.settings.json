@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "proposed_sys_comments",
+  "info": {
+    "name": "ProposedSysComments",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "comment": {
+      "type": "text"
+    },
+    "username": {
+      "type": "string"
+    },
+    "userTitle": {
+      "type": "string"
+    },
+    "proposed_system": {
+      "via": "proposed_sys_comments",
+      "model": "proposed-systems"
+    },
+    "institute": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_comments_comments",
+  "info": {
+    "name": "Comments",
+    "icon": "address-card"
+  },
+  "options": {},
+  "attributes": {
+    "comment": {
+      "type": "text"
+    },
+    "username": {
+      "type": "string"
+    },
+    "userTitle": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

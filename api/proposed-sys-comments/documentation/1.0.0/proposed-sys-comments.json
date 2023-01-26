@@ -1,12 +1,12 @@
 {
   "paths": {
-    "/proposed-systems": {
+    "/proposed-sys-comments": {
       "get": {
         "deprecated": false,
-        "description": "Find all the proposed-systems's records",
+        "description": "Find all the proposed-sys-comments's records",
         "responses": {
           "200": {
-            "description": "Retrieve proposed-systems document(s)",
+            "description": "Retrieve proposed-sys-comments document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -52,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Proposed-systems"
+          "Proposed-sys-comments"
         ],
         "parameters": [
           {
@@ -195,10 +195,10 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new proposed-systems record",
+        "description": "Create a new proposed-sys-comments record",
         "responses": {
           "200": {
-            "description": "Retrieve proposed-systems document(s)",
+            "description": "Retrieve proposed-sys-comments document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -244,7 +244,7 @@
         },
         "summary": "",
         "tags": [
-          "Proposed-systems"
+          "Proposed-sys-comments"
         ],
         "requestBody": {
           "description": "",
@@ -252,20 +252,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewProposed-systems"
+                "$ref": "#/components/schemas/NewProposed-sys-comments"
               }
             }
           }
         }
       }
     },
-    "/proposed-systems/count": {
+    "/proposed-sys-comments/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of proposed-systems documents",
+        "description": "Retrieve the numver of proposed-sys-comments documents",
         "responses": {
           "200": {
-            "description": "Retrieve proposed-systems document(s)",
+            "description": "Retrieve proposed-sys-comments document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -311,18 +311,18 @@
         },
         "summary": "",
         "tags": [
-          "Proposed-systems"
+          "Proposed-sys-comments"
         ],
         "parameters": []
       }
     },
-    "/proposed-systems/{id}": {
+    "/proposed-sys-comments/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one proposed-systems record",
+        "description": "Find one proposed-sys-comments record",
         "responses": {
           "200": {
-            "description": "Retrieve proposed-systems document(s)",
+            "description": "Retrieve proposed-sys-comments document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -368,7 +368,7 @@
         },
         "summary": "",
         "tags": [
-          "Proposed-systems"
+          "Proposed-sys-comments"
         ],
         "parameters": [
           {
@@ -385,10 +385,10 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single proposed-systems record",
+        "description": "Update a single proposed-sys-comments record",
         "responses": {
           "200": {
-            "description": "Retrieve proposed-systems document(s)",
+            "description": "Retrieve proposed-sys-comments document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -434,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Proposed-systems"
+          "Proposed-sys-comments"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewProposed-systems"
+                "$ref": "#/components/schemas/NewProposed-sys-comments"
               }
             }
           }
@@ -462,10 +462,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single proposed-systems record",
+        "description": "Delete a single proposed-sys-comments record",
         "responses": {
           "200": {
-            "description": "deletes a single proposed-systems based on the ID supplied",
+            "description": "deletes a single proposed-sys-comments based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -508,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Proposed-systems"
+          "Proposed-sys-comments"
         ],
         "parameters": [
           {
@@ -527,7 +527,7 @@
   },
   "components": {
     "schemas": {
-      "Proposed-systems": {
+      "Proposed-sys-comments": {
         "required": [
           "id"
         ],
@@ -535,95 +535,64 @@
           "id": {
             "type": "string"
           },
-          "name": {
+          "title": {
             "type": "string"
           },
-          "description": {
+          "comment": {
             "type": "string"
           },
-          "userType": {
+          "username": {
             "type": "string"
           },
-          "serviceType": {
+          "userTitle": {
             "type": "string"
           },
-          "access": {
-            "type": "string"
-          },
-          "objective": {
-            "type": "string"
-          },
-          "institution": {
+          "proposed_system": {
             "required": [
-              "id",
-              "Name"
+              "id"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "Name": {
+              "name": {
                 "type": "string"
               },
-              "Mandate": {
+              "description": {
                 "type": "string"
               },
-              "Vision": {
+              "userType": {
                 "type": "string"
               },
-              "Mission": {
+              "serviceType": {
                 "type": "string"
               },
-              "mis": {
+              "access": {
+                "type": "string"
+              },
+              "objective": {
+                "type": "string"
+              },
+              "institution": {
+                "type": "string"
+              },
+              "misAvailable": {
+                "type": "string"
+              },
+              "features": {
+                "type": "component"
+              },
+              "challenges": {
+                "type": "component"
+              },
+              "proposed_sys_comments": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               },
-              "website": {
+              "status": {
                 "type": "string"
-              },
-              "e_services": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "mobile_services": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "phone": {
-                "type": "string"
-              },
-              "proposed_systems": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "team": {
-                "type": "string"
-              },
-              "job_descriptions": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "sections": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "msites": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
               },
               "published_at": {
                 "type": "string"
@@ -636,87 +605,7 @@
               }
             }
           },
-          "misAvailable": {
-            "type": "string"
-          },
-          "features": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "priority": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "challenges": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "proposed_sys_comments": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "comment": {
-                  "type": "string"
-                },
-                "username": {
-                  "type": "string"
-                },
-                "userTitle": {
-                  "type": "string"
-                },
-                "proposed_system": {
-                  "type": "string"
-                },
-                "institute": {
-                  "type": "string"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "status": {
+          "institute": {
             "type": "string"
           },
           "published_at": {
@@ -725,76 +614,24 @@
           }
         }
       },
-      "NewProposed-systems": {
+      "NewProposed-sys-comments": {
         "properties": {
-          "name": {
+          "title": {
             "type": "string"
           },
-          "description": {
+          "comment": {
             "type": "string"
           },
-          "userType": {
+          "username": {
             "type": "string"
           },
-          "serviceType": {
+          "userTitle": {
             "type": "string"
           },
-          "access": {
+          "proposed_system": {
             "type": "string"
           },
-          "objective": {
-            "type": "string"
-          },
-          "institution": {
-            "type": "string"
-          },
-          "misAvailable": {
-            "type": "string"
-          },
-          "features": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "priority": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "challenges": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "proposed_sys_comments": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "status": {
+          "institute": {
             "type": "string"
           },
           "published_at": {

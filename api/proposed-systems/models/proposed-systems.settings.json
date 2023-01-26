@@ -46,6 +46,13 @@
       "type": "component",
       "repeatable": true,
       "component": "description.challenges"
+    },
+    "proposed_sys_comments": {
+      "via": "proposed_system",
+      "collection": "proposed-sys-comments"
+    },
+    "status": {
+      "type": "string"
     }
   }
 }

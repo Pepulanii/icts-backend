@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/proposed-sys-comments",
+      "handler": "proposed-sys-comments.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/proposed-sys-comments/count",
+      "handler": "proposed-sys-comments.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/proposed-sys-comments/:id",
+      "handler": "proposed-sys-comments.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/proposed-sys-comments",
+      "handler": "proposed-sys-comments.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/proposed-sys-comments/:id",
+      "handler": "proposed-sys-comments.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/proposed-sys-comments/:id",
+      "handler": "proposed-sys-comments.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
