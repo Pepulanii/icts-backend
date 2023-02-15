@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/proposed-docs",
+      "handler": "proposed-docs.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/proposed-docs/count",
+      "handler": "proposed-docs.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/proposed-docs/:id",
+      "handler": "proposed-docs.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/proposed-docs",
+      "handler": "proposed-docs.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/proposed-docs/:id",
+      "handler": "proposed-docs.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/proposed-docs/:id",
+      "handler": "proposed-docs.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -53,6 +53,14 @@
     },
     "status": {
       "type": "string"
+    },
+    "development": {
+      "via": "proposed_system",
+      "model": "development"
+    },
+    "proposed_docs": {
+      "via": "proposed_system",
+      "collection": "proposed-docs"
     }
   }
 }

@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "plan_docs",
+  "info": {
+    "name": "PlanDoc",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "docId": {
+      "type": "biginteger"
+    },
+    "development_plan": {
+      "via": "plan_docs",
+      "model": "development-plan"
+    }
+  }
+}

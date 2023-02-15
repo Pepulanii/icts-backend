@@ -1,12 +1,12 @@
 {
   "paths": {
-    "/e-services": {
+    "/plan-docs": {
       "get": {
         "deprecated": false,
-        "description": "Find all the e-services's records",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve e-services document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -52,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "E-services"
+          "Plan-doc"
         ],
         "parameters": [
           {
@@ -195,10 +195,10 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new e-services record",
+        "description": "Create a new record",
         "responses": {
           "200": {
-            "description": "Retrieve e-services document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -244,7 +244,7 @@
         },
         "summary": "",
         "tags": [
-          "E-services"
+          "Plan-doc"
         ],
         "requestBody": {
           "description": "",
@@ -252,20 +252,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewE-services"
+                "$ref": "#/components/schemas/NewPlan-doc"
               }
             }
           }
         }
       }
     },
-    "/e-services/count": {
+    "/plan-docs/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of e-services documents",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve e-services document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -311,18 +311,18 @@
         },
         "summary": "",
         "tags": [
-          "E-services"
+          "Plan-doc"
         ],
         "parameters": []
       }
     },
-    "/e-services/{id}": {
+    "/plan-docs/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one e-services record",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve e-services document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -368,7 +368,7 @@
         },
         "summary": "",
         "tags": [
-          "E-services"
+          "Plan-doc"
         ],
         "parameters": [
           {
@@ -385,10 +385,10 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single e-services record",
+        "description": "Update a record",
         "responses": {
           "200": {
-            "description": "Retrieve e-services document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -434,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "E-services"
+          "Plan-doc"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewE-services"
+                "$ref": "#/components/schemas/NewPlan-doc"
               }
             }
           }
@@ -462,10 +462,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single e-services record",
+        "description": "Delete a record",
         "responses": {
           "200": {
-            "description": "deletes a single e-services based on the ID supplied",
+            "description": "deletes a single record based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -508,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "E-services"
+          "Plan-doc"
         ],
         "parameters": [
           {
@@ -527,7 +527,7 @@
   },
   "components": {
     "schemas": {
-      "E-services": {
+      "Plan-doc": {
         "required": [
           "id"
         ],
@@ -535,192 +535,52 @@
           "id": {
             "type": "string"
           },
-          "Name": {
+          "name": {
             "type": "string"
           },
-          "Description": {
+          "category": {
             "type": "string"
           },
-          "institution": {
+          "docId": {
+            "type": "integer"
+          },
+          "development_plan": {
             "required": [
-              "id",
-              "Name"
+              "id"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "Name": {
+              "name": {
                 "type": "string"
               },
-              "Mandate": {
+              "devTeam": {
+                "type": "component"
+              },
+              "developmentStart": {
                 "type": "string"
               },
-              "Vision": {
+              "developmentEnd": {
                 "type": "string"
               },
-              "Mission": {
+              "technology": {
+                "type": "component"
+              },
+              "development": {
                 "type": "string"
               },
-              "mis": {
+              "plan_docs": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               },
-              "website": {
-                "type": "string"
-              },
-              "e_services": {
+              "meetings": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
-              },
-              "mobile_services": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "phone": {
-                "type": "string"
-              },
-              "proposed_systems": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "team": {
-                "type": "string"
-              },
-              "job_descriptions": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "sections": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "msites": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "Status": {
-            "type": "string",
-            "default": "OPERATIONAL",
-            "enum": [
-              "OPERATIONAL",
-              "OFFLINE"
-            ]
-          },
-          "url": {
-            "type": "string"
-          },
-          "mi": {
-            "required": [
-              "id",
-              "Name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "Name": {
-                "type": "string"
-              },
-              "institution": {
-                "type": "string"
-              },
-              "Description": {
-                "type": "string"
-              },
-              "Launch": {
-                "type": "string"
-              },
-              "Serial": {
-                "type": "string"
-              },
-              "Location": {
-                "type": "string"
-              },
-              "Platform": {
-                "type": "string"
-              },
-              "Developer": {
-                "type": "string"
-              },
-              "SourceCode": {
-                "type": "string"
-              },
-              "LicencingCost": {
-                "type": "number"
-              },
-              "AnnualRevenue": {
-                "type": "number"
-              },
-              "Users": {
-                "type": "integer"
-              },
-              "url": {
-                "type": "string"
-              },
-              "Access": {
-                "type": "string"
-              },
-              "ServiceType": {
-                "type": "string"
-              },
-              "SysType": {
-                "type": "string"
-              },
-              "Mobile": {
-                "type": "string"
-              },
-              "Status": {
-                "type": "string"
-              },
-              "agency": {
-                "type": "string"
-              },
-              "e_services": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "documentations": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "doc": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "ProjectOwner": {
-                "type": "string"
               },
               "published_at": {
                 "type": "string"
@@ -739,29 +599,18 @@
           }
         }
       },
-      "NewE-services": {
+      "NewPlan-doc": {
         "properties": {
-          "Name": {
+          "name": {
             "type": "string"
           },
-          "Description": {
+          "category": {
             "type": "string"
           },
-          "institution": {
-            "type": "string"
+          "docId": {
+            "type": "integer"
           },
-          "Status": {
-            "type": "string",
-            "default": "OPERATIONAL",
-            "enum": [
-              "OPERATIONAL",
-              "OFFLINE"
-            ]
-          },
-          "url": {
-            "type": "string"
-          },
-          "mi": {
+          "development_plan": {
             "type": "string"
           },
           "published_at": {

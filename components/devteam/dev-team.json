@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_devteam_dev_teams",
+  "info": {
+    "name": "devTeam",
+    "icon": "user-friends",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "role": {
+      "type": "string"
+    },
+    "devName": {
+      "type": "string"
+    },
+    "devEmail": {
+      "type": "email"
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "development_plans",
+  "info": {
+    "name": "DevelopmentPlan",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "devTeam": {
+      "type": "component",
+      "repeatable": true,
+      "component": "devteam.dev-team"
+    },
+    "developmentStart": {
+      "type": "date"
+    },
+    "developmentEnd": {
+      "type": "date"
+    },
+    "technology": {
+      "type": "component",
+      "repeatable": true,
+      "component": "technology.technology"
+    },
+    "development": {
+      "model": "development",
+      "via": "development_plan"
+    },
+    "plan_docs": {
+      "via": "development_plan",
+      "collection": "plan-doc"
+    },
+    "meetings": {
+      "via": "development_plan",
+      "collection": "meeting"
+    }
+  }
+}

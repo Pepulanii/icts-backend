@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "messages",
+  "info": {
+    "name": "Messages"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "message": {
+      "type": "text"
+    },
+    "sender": {
+      "type": "biginteger"
+    },
+    "receiver": {
+      "type": "component",
+      "repeatable": true,
+      "component": "receiver.receiver"
+    }
+  }
+}

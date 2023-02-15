@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "proposed_docs",
+  "info": {
+    "name": "ProposedDocs",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "docId": {
+      "type": "biginteger"
+    },
+    "proposed_system": {
+      "model": "proposed-systems",
+      "via": "proposed_docs"
+    }
+  }
+}

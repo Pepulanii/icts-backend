@@ -594,6 +594,15 @@
               "status": {
                 "type": "string"
               },
+              "development": {
+                "type": "string"
+              },
+              "proposed_docs": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
               "published_at": {
                 "type": "string"
               },

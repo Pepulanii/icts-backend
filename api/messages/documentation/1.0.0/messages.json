@@ -1,19 +1,18 @@
 {
   "paths": {
-    "/e-services": {
+    "/messages": {
       "get": {
         "deprecated": false,
-        "description": "Find all the e-services's records",
+        "description": "Find all the messages's records",
         "responses": {
           "200": {
-            "description": "Retrieve e-services document(s)",
+            "description": "Retrieve messages document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Messages"
                   }
                 }
               }
@@ -52,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "E-services"
+          "Messages"
         ],
         "parameters": [
           {
@@ -195,18 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new e-services record",
+        "description": "Create a new messages record",
         "responses": {
           "200": {
-            "description": "Retrieve e-services document(s)",
+            "description": "Retrieve messages document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Messages"
                 }
               }
             }
@@ -244,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "E-services"
+          "Messages"
         ],
         "requestBody": {
           "description": "",
@@ -252,26 +247,26 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewE-services"
+                "$ref": "#/components/schemas/NewMessages"
               }
             }
           }
         }
       }
     },
-    "/e-services/count": {
+    "/messages/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of e-services documents",
+        "description": "Retrieve the numver of messages documents",
         "responses": {
           "200": {
-            "description": "Retrieve e-services document(s)",
+            "description": "Retrieve messages document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "properties": {
-                    "foo": {
-                      "type": "string"
+                    "count": {
+                      "type": "integer"
                     }
                   }
                 }
@@ -311,26 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "E-services"
+          "Messages"
         ],
         "parameters": []
       }
     },
-    "/e-services/{id}": {
+    "/messages/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one e-services record",
+        "description": "Find one messages record",
         "responses": {
           "200": {
-            "description": "Retrieve e-services document(s)",
+            "description": "Retrieve messages document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Messages"
                 }
               }
             }
@@ -368,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "E-services"
+          "Messages"
         ],
         "parameters": [
           {
@@ -385,18 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single e-services record",
+        "description": "Update a single messages record",
         "responses": {
           "200": {
-            "description": "Retrieve e-services document(s)",
+            "description": "Retrieve messages document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Messages"
                 }
               }
             }
@@ -434,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "E-services"
+          "Messages"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewE-services"
+                "$ref": "#/components/schemas/NewMessages"
               }
             }
           }
@@ -462,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single e-services record",
+        "description": "Delete a single messages record",
         "responses": {
           "200": {
-            "description": "deletes a single e-services based on the ID supplied",
+            "description": "deletes a single messages based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -508,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "E-services"
+          "Messages"
         ],
         "parameters": [
           {
@@ -527,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "E-services": {
+      "Messages": {
         "required": [
           "id"
         ],
@@ -535,201 +522,32 @@
           "id": {
             "type": "string"
           },
-          "Name": {
+          "title": {
             "type": "string"
           },
-          "Description": {
+          "message": {
             "type": "string"
           },
-          "institution": {
-            "required": [
-              "id",
-              "Name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "Name": {
-                "type": "string"
-              },
-              "Mandate": {
-                "type": "string"
-              },
-              "Vision": {
-                "type": "string"
-              },
-              "Mission": {
-                "type": "string"
-              },
-              "mis": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "website": {
-                "type": "string"
-              },
-              "e_services": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "mobile_services": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "phone": {
-                "type": "string"
-              },
-              "proposed_systems": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "team": {
-                "type": "string"
-              },
-              "job_descriptions": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "sections": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "msites": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
+          "sender": {
+            "type": "integer"
           },
-          "Status": {
-            "type": "string",
-            "default": "OPERATIONAL",
-            "enum": [
-              "OPERATIONAL",
-              "OFFLINE"
-            ]
-          },
-          "url": {
-            "type": "string"
-          },
-          "mi": {
-            "required": [
-              "id",
-              "Name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "Name": {
-                "type": "string"
-              },
-              "institution": {
-                "type": "string"
-              },
-              "Description": {
-                "type": "string"
-              },
-              "Launch": {
-                "type": "string"
-              },
-              "Serial": {
-                "type": "string"
-              },
-              "Location": {
-                "type": "string"
-              },
-              "Platform": {
-                "type": "string"
-              },
-              "Developer": {
-                "type": "string"
-              },
-              "SourceCode": {
-                "type": "string"
-              },
-              "LicencingCost": {
-                "type": "number"
-              },
-              "AnnualRevenue": {
-                "type": "number"
-              },
-              "Users": {
-                "type": "integer"
-              },
-              "url": {
-                "type": "string"
-              },
-              "Access": {
-                "type": "string"
-              },
-              "ServiceType": {
-                "type": "string"
-              },
-              "SysType": {
-                "type": "string"
-              },
-              "Mobile": {
-                "type": "string"
-              },
-              "Status": {
-                "type": "string"
-              },
-              "agency": {
-                "type": "string"
-              },
-              "e_services": {
-                "type": "array",
-                "items": {
+          "receiver": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
                   "type": "string"
+                },
+                "recipient": {
+                  "type": "integer"
+                },
+                "received": {
+                  "type": "boolean"
                 }
-              },
-              "documentations": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "doc": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "ProjectOwner": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
               }
             }
           },
@@ -739,30 +557,36 @@
           }
         }
       },
-      "NewE-services": {
+      "NewMessages": {
         "properties": {
-          "Name": {
+          "title": {
             "type": "string"
           },
-          "Description": {
+          "message": {
             "type": "string"
           },
-          "institution": {
-            "type": "string"
+          "sender": {
+            "type": "integer"
           },
-          "Status": {
-            "type": "string",
-            "default": "OPERATIONAL",
-            "enum": [
-              "OPERATIONAL",
-              "OFFLINE"
-            ]
-          },
-          "url": {
-            "type": "string"
-          },
-          "mi": {
-            "type": "string"
+          "receiver": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "recipient": {
+                  "type": "integer"
+                },
+                "received": {
+                  "type": "boolean"
+                }
+              }
+            }
           },
           "published_at": {
             "type": "string",
@@ -778,5 +602,9 @@
       }
     }
   },
-  "tags": []
+  "tags": [
+    {
+      "name": "Messages"
+    }
+  ]
 }

@@ -91,6 +91,9 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
+    },
+    "ProjectOwner": {
+      "type": "string"
     }
   }
 }

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_technology_technologies",
+  "info": {
+    "name": "technology",
+    "icon": "laptop-code"
+  },
+  "options": {},
+  "attributes": {
+    "techName": {
+      "type": "string"
+    },
+    "techCategory": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_receiver_receivers",
+  "info": {
+    "name": "receiver",
+    "icon": "user-alt"
+  },
+  "options": {},
+  "attributes": {
+    "recipient": {
+      "type": "biginteger"
+    },
+    "received": {
+      "type": "boolean"
+    }
+  }
+}
