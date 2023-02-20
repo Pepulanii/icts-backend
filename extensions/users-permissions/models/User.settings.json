@@ -62,18 +62,6 @@
     "institution": {
       "model": "institution"
     },
-    "avatar": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": false,
-      "pluginOptions": {}
-    },
     "job_description": {
       "model": "job-description",
       "via": "user"

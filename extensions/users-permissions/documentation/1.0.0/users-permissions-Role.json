@@ -564,9 +564,6 @@
                 "institution": {
                   "type": "string"
                 },
-                "avatar": {
-                  "type": "string"
-                },
                 "job_description": {
                   "type": "string"
                 },
