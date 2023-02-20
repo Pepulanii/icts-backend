@@ -582,6 +582,9 @@
                   "type": "string"
                 }
               },
+              "partners": {
+                "type": "component"
+              },
               "published_at": {
                 "type": "string"
               },

@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "02/10/2023 9:56:51 AM"
+    "x-generation-date": "02/15/2023 5:25:52 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -13003,6 +13003,32 @@
               }
             }
           },
+          "partners": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "role": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "organization": {
+                  "type": "string"
+                }
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -13078,6 +13104,32 @@
             "type": "array",
             "items": {
               "type": "string"
+            }
+          },
+          "partners": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "role": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "organization": {
+                  "type": "string"
+                }
+              }
             }
           },
           "published_at": {
@@ -13207,6 +13259,9 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "partners": {
+                "type": "component"
               },
               "published_at": {
                 "type": "string"
@@ -14616,6 +14671,9 @@
                   "type": "string"
                 }
               },
+              "partners": {
+                "type": "component"
+              },
               "published_at": {
                 "type": "string"
               },
@@ -15498,6 +15556,9 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "partners": {
+                "type": "component"
               },
               "published_at": {
                 "type": "string"

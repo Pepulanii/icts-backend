@@ -42,6 +42,11 @@
     "meetings": {
       "via": "development_plan",
       "collection": "meeting"
+    },
+    "partners": {
+      "type": "component",
+      "repeatable": true,
+      "component": "partners.partners"
     }
   }
 }

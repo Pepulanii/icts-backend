@@ -685,6 +685,32 @@
               }
             }
           },
+          "partners": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "role": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "organization": {
+                  "type": "string"
+                }
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -760,6 +786,32 @@
             "type": "array",
             "items": {
               "type": "string"
+            }
+          },
+          "partners": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "role": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "organization": {
+                  "type": "string"
+                }
+              }
             }
           },
           "published_at": {
