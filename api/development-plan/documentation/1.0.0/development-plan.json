@@ -651,40 +651,6 @@
               }
             }
           },
-          "meetings": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "agenda": {
-                  "type": "string"
-                },
-                "meetingDate": {
-                  "type": "string"
-                },
-                "development_plan": {
-                  "type": "string"
-                },
-                "docId": {
-                  "type": "integer"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
           "partners": {
             "type": "array",
             "items": {
@@ -777,12 +743,6 @@
             "type": "string"
           },
           "plan_docs": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "meetings": {
             "type": "array",
             "items": {
               "type": "string"

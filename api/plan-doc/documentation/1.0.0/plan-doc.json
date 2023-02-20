@@ -576,12 +576,6 @@
                   "type": "string"
                 }
               },
-              "meetings": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
               "partners": {
                 "type": "component"
               },

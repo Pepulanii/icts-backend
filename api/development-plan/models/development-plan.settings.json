@@ -39,10 +39,6 @@
       "via": "development_plan",
       "collection": "plan-doc"
     },
-    "meetings": {
-      "via": "development_plan",
-      "collection": "meeting"
-    },
     "partners": {
       "type": "component",
       "repeatable": true,
