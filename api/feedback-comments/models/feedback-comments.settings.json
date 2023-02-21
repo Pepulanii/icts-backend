@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "feedback_comments",
+  "info": {
+    "name": "FeedbackComments",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "comment": {
+      "type": "text"
+    },
+    "comment_date": {
+      "type": "datetime"
+    },
+    "feedback_topic": {
+      "via": "feedback_comments",
+      "model": "feedback-topic"
+    },
+    "user_id": {
+      "type": "integer"
+    }
+  }
+}

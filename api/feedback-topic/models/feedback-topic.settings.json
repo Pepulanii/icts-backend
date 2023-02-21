@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "feedback_topics",
+  "info": {
+    "name": "FeedbackTopic",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "topic": {
+      "type": "string"
+    },
+    "feedback_comments": {
+      "via": "feedback_topic",
+      "collection": "feedback-comments"
+    },
+    "user_id": {
+      "type": "integer"
+    },
+    "votes": {
+      "type": "integer"
+    }
+  }
+}

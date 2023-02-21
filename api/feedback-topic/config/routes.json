@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/feedback-topics",
+      "handler": "feedback-topic.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/feedback-topics/count",
+      "handler": "feedback-topic.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/feedback-topics/:id",
+      "handler": "feedback-topic.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/feedback-topics",
+      "handler": "feedback-topic.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/feedback-topics/:id",
+      "handler": "feedback-topic.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/feedback-topics/:id",
+      "handler": "feedback-topic.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
