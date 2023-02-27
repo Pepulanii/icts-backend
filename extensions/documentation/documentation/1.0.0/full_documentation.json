@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "02/22/2023 12:19:58 AM"
+    "x-generation-date": "02/24/2023 8:23:10 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -14201,9 +14201,8 @@
           "comment": {
             "type": "string"
           },
-          "comment_date": {
-            "type": "string",
-            "format": "date-time"
+          "user_id": {
+            "type": "integer"
           },
           "feedback_topic": {
             "required": [
@@ -14216,17 +14215,20 @@
               "topic": {
                 "type": "string"
               },
+              "user_id": {
+                "type": "integer"
+              },
+              "desc": {
+                "type": "string"
+              },
+              "votes": {
+                "type": "component"
+              },
               "feedback_comments": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
-              },
-              "user_id": {
-                "type": "integer"
-              },
-              "votes": {
-                "type": "integer"
               },
               "published_at": {
                 "type": "string"
@@ -14239,9 +14241,6 @@
               }
             }
           },
-          "user_id": {
-            "type": "integer"
-          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -14253,15 +14252,11 @@
           "comment": {
             "type": "string"
           },
-          "comment_date": {
-            "type": "string",
-            "format": "date-time"
+          "user_id": {
+            "type": "integer"
           },
           "feedback_topic": {
             "type": "string"
-          },
-          "user_id": {
-            "type": "integer"
           },
           "published_at": {
             "type": "string",
@@ -14286,6 +14281,29 @@
           "topic": {
             "type": "string"
           },
+          "user_id": {
+            "type": "integer"
+          },
+          "desc": {
+            "type": "string"
+          },
+          "votes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "user_id": {
+                  "type": "integer"
+                }
+              }
+            }
+          },
           "feedback_comments": {
             "type": "array",
             "items": {
@@ -14299,14 +14317,11 @@
                 "comment": {
                   "type": "string"
                 },
-                "comment_date": {
-                  "type": "string"
+                "user_id": {
+                  "type": "integer"
                 },
                 "feedback_topic": {
                   "type": "string"
-                },
-                "user_id": {
-                  "type": "integer"
                 },
                 "published_at": {
                   "type": "string"
@@ -14320,12 +14335,6 @@
               }
             }
           },
-          "user_id": {
-            "type": "integer"
-          },
-          "votes": {
-            "type": "integer"
-          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -14337,17 +14346,34 @@
           "topic": {
             "type": "string"
           },
+          "user_id": {
+            "type": "integer"
+          },
+          "desc": {
+            "type": "string"
+          },
+          "votes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "user_id": {
+                  "type": "integer"
+                }
+              }
+            }
+          },
           "feedback_comments": {
             "type": "array",
             "items": {
               "type": "string"
             }
-          },
-          "user_id": {
-            "type": "integer"
-          },
-          "votes": {
-            "type": "integer"
           },
           "published_at": {
             "type": "string",

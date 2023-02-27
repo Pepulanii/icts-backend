@@ -538,6 +538,29 @@
           "topic": {
             "type": "string"
           },
+          "user_id": {
+            "type": "integer"
+          },
+          "desc": {
+            "type": "string"
+          },
+          "votes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "user_id": {
+                  "type": "integer"
+                }
+              }
+            }
+          },
           "feedback_comments": {
             "type": "array",
             "items": {
@@ -551,14 +574,11 @@
                 "comment": {
                   "type": "string"
                 },
-                "comment_date": {
-                  "type": "string"
+                "user_id": {
+                  "type": "integer"
                 },
                 "feedback_topic": {
                   "type": "string"
-                },
-                "user_id": {
-                  "type": "integer"
                 },
                 "published_at": {
                   "type": "string"
@@ -572,12 +592,6 @@
               }
             }
           },
-          "user_id": {
-            "type": "integer"
-          },
-          "votes": {
-            "type": "integer"
-          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -589,17 +603,34 @@
           "topic": {
             "type": "string"
           },
+          "user_id": {
+            "type": "integer"
+          },
+          "desc": {
+            "type": "string"
+          },
+          "votes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "user_id": {
+                  "type": "integer"
+                }
+              }
+            }
+          },
           "feedback_comments": {
             "type": "array",
             "items": {
               "type": "string"
             }
-          },
-          "user_id": {
-            "type": "integer"
-          },
-          "votes": {
-            "type": "integer"
           },
           "published_at": {
             "type": "string",

@@ -538,9 +538,8 @@
           "comment": {
             "type": "string"
           },
-          "comment_date": {
-            "type": "string",
-            "format": "date-time"
+          "user_id": {
+            "type": "integer"
           },
           "feedback_topic": {
             "required": [
@@ -553,17 +552,20 @@
               "topic": {
                 "type": "string"
               },
+              "user_id": {
+                "type": "integer"
+              },
+              "desc": {
+                "type": "string"
+              },
+              "votes": {
+                "type": "component"
+              },
               "feedback_comments": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
-              },
-              "user_id": {
-                "type": "integer"
-              },
-              "votes": {
-                "type": "integer"
               },
               "published_at": {
                 "type": "string"
@@ -576,9 +578,6 @@
               }
             }
           },
-          "user_id": {
-            "type": "integer"
-          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -590,15 +589,11 @@
           "comment": {
             "type": "string"
           },
-          "comment_date": {
-            "type": "string",
-            "format": "date-time"
+          "user_id": {
+            "type": "integer"
           },
           "feedback_topic": {
             "type": "string"
-          },
-          "user_id": {
-            "type": "integer"
           },
           "published_at": {
             "type": "string",

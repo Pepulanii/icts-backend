@@ -15,15 +15,12 @@
     "comment": {
       "type": "text"
     },
-    "comment_date": {
-      "type": "datetime"
-    },
-    "feedback_topic": {
-      "via": "feedback_comments",
-      "model": "feedback-topic"
-    },
     "user_id": {
       "type": "integer"
+    },
+    "feedback_topic": {
+      "model": "feedback-topic",
+      "via": "feedback_comments"
     }
   }
 }

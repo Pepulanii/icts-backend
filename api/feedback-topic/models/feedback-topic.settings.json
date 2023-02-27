@@ -15,15 +15,20 @@
     "topic": {
       "type": "string"
     },
-    "feedback_comments": {
-      "via": "feedback_topic",
-      "collection": "feedback-comments"
-    },
     "user_id": {
       "type": "integer"
     },
+    "desc": {
+      "type": "text"
+    },
     "votes": {
-      "type": "integer"
+      "type": "component",
+      "repeatable": true,
+      "component": "votes.votes"
+    },
+    "feedback_comments": {
+      "via": "feedback_topic",
+      "collection": "feedback-comments"
     }
   }
 }

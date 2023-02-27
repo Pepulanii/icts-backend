@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_votes_votes",
+  "info": {
+    "name": "votes",
+    "icon": "vote-yea"
+  },
+  "options": {},
+  "attributes": {
+    "user_id": {
+      "type": "integer"
+    }
+  }
+}
