@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_users_users",
+  "info": {
+    "name": "users",
+    "icon": "users-cog"
+  },
+  "options": {},
+  "attributes": {
+    "userId": {
+      "type": "integer"
+    }
+  }
+}

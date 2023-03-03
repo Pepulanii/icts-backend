@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "notifications",
+  "info": {
+    "name": "Notifications",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "text"
+    },
+    "userId": {
+      "type": "integer"
+    },
+    "seen": {
+      "type": "component",
+      "repeatable": true,
+      "component": "users.users"
+    },
+    "category": {
+      "type": "string"
+    },
+    "collection_type": {
+      "type": "string"
+    },
+    "collection_type_id": {
+      "type": "integer"
+    },
+    "institution_id": {
+      "type": "integer"
+    }
+  }
+}
