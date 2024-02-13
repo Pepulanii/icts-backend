@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "Projects",
+  "info": {
+    "name": "projects",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Sector": {
+      "type": "string"
+    },
+    "Project_Name": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Start_Date": {
+      "type": "date"
+    },
+    "Location": {
+      "type": "text"
+    },
+    "Project_cost": {
+      "type": "decimal"
+    },
+    "Status": {
+      "type": "string"
+    },
+    "End_Date": {
+      "type": "date"
+    }
+  }
+}

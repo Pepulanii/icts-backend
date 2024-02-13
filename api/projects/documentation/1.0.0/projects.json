@@ -1,19 +1,18 @@
 {
   "paths": {
-    "/proposed-sys-comments": {
+    "/projects": {
       "get": {
         "deprecated": false,
-        "description": "Find all the proposed-sys-comments's records",
+        "description": "Find all the projects's records",
         "responses": {
           "200": {
-            "description": "Retrieve proposed-sys-comments document(s)",
+            "description": "Retrieve projects document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Projects"
                   }
                 }
               }
@@ -52,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Proposed-sys-comments"
+          "Projects"
         ],
         "parameters": [
           {
@@ -195,18 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new proposed-sys-comments record",
+        "description": "Create a new projects record",
         "responses": {
           "200": {
-            "description": "Retrieve proposed-sys-comments document(s)",
+            "description": "Retrieve projects document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Projects"
                 }
               }
             }
@@ -244,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Proposed-sys-comments"
+          "Projects"
         ],
         "requestBody": {
           "description": "",
@@ -252,26 +247,26 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewProposed-sys-comments"
+                "$ref": "#/components/schemas/NewProjects"
               }
             }
           }
         }
       }
     },
-    "/proposed-sys-comments/count": {
+    "/projects/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the number of proposed-sys-comments documents",
+        "description": "Retrieve the number of projects documents",
         "responses": {
           "200": {
-            "description": "Retrieve proposed-sys-comments document(s)",
+            "description": "Retrieve projects document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "properties": {
-                    "foo": {
-                      "type": "string"
+                    "count": {
+                      "type": "integer"
                     }
                   }
                 }
@@ -311,26 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Proposed-sys-comments"
+          "Projects"
         ],
         "parameters": []
       }
     },
-    "/proposed-sys-comments/{id}": {
+    "/projects/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one proposed-sys-comments record",
+        "description": "Find one projects record",
         "responses": {
           "200": {
-            "description": "Retrieve proposed-sys-comments document(s)",
+            "description": "Retrieve projects document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Projects"
                 }
               }
             }
@@ -368,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Proposed-sys-comments"
+          "Projects"
         ],
         "parameters": [
           {
@@ -385,18 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single proposed-sys-comments record",
+        "description": "Update a single projects record",
         "responses": {
           "200": {
-            "description": "Retrieve proposed-sys-comments document(s)",
+            "description": "Retrieve projects document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Projects"
                 }
               }
             }
@@ -434,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Proposed-sys-comments"
+          "Projects"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewProposed-sys-comments"
+                "$ref": "#/components/schemas/NewProjects"
               }
             }
           }
@@ -462,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single proposed-sys-comments record",
+        "description": "Delete a single projects record",
         "responses": {
           "200": {
-            "description": "deletes a single proposed-sys-comments based on the ID supplied",
+            "description": "deletes a single projects based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -508,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Proposed-sys-comments"
+          "Projects"
         ],
         "parameters": [
           {
@@ -527,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Proposed-sys-comments": {
+      "Projects": {
         "required": [
           "id"
         ],
@@ -535,87 +522,31 @@
           "id": {
             "type": "string"
           },
-          "title": {
+          "Sector": {
             "type": "string"
           },
-          "comment": {
+          "Project_Name": {
             "type": "string"
           },
-          "username": {
+          "Description": {
             "type": "string"
           },
-          "userTitle": {
+          "Start_Date": {
+            "type": "string",
+            "format": "date"
+          },
+          "Location": {
             "type": "string"
           },
-          "proposed_system": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "userType": {
-                "type": "string"
-              },
-              "serviceType": {
-                "type": "string"
-              },
-              "access": {
-                "type": "string"
-              },
-              "objective": {
-                "type": "string"
-              },
-              "institution": {
-                "type": "string"
-              },
-              "misAvailable": {
-                "type": "string"
-              },
-              "features": {
-                "type": "component"
-              },
-              "challenges": {
-                "type": "component"
-              },
-              "proposed_sys_comments": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "status": {
-                "type": "string"
-              },
-              "development": {
-                "type": "string"
-              },
-              "proposed_docs": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
+          "Project_cost": {
+            "type": "number"
           },
-          "institute": {
+          "Status": {
             "type": "string"
+          },
+          "End_Date": {
+            "type": "string",
+            "format": "date"
           },
           "published_at": {
             "type": "string",
@@ -623,25 +554,33 @@
           }
         }
       },
-      "NewProposed-sys-comments": {
+      "NewProjects": {
         "properties": {
-          "title": {
+          "Sector": {
             "type": "string"
           },
-          "comment": {
+          "Project_Name": {
             "type": "string"
           },
-          "username": {
+          "Description": {
             "type": "string"
           },
-          "userTitle": {
+          "Start_Date": {
+            "type": "string",
+            "format": "date"
+          },
+          "Location": {
             "type": "string"
           },
-          "proposed_system": {
+          "Project_cost": {
+            "type": "number"
+          },
+          "Status": {
             "type": "string"
           },
-          "institute": {
-            "type": "string"
+          "End_Date": {
+            "type": "string",
+            "format": "date"
           },
           "published_at": {
             "type": "string",
@@ -657,5 +596,9 @@
       }
     }
   },
-  "tags": []
+  "tags": [
+    {
+      "name": "Projects"
+    }
+  ]
 }

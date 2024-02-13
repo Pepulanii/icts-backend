@@ -262,7 +262,7 @@
     "/proposed-systems/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of proposed-systems documents",
+        "description": "Retrieve the number of proposed-systems documents",
         "responses": {
           "200": {
             "description": "Retrieve proposed-systems document(s)",
