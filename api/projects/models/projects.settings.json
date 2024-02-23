@@ -40,6 +40,9 @@
       "type": "component",
       "repeatable": true,
       "component": "description.actions"
+    },
+    "institution": {
+      "model": "institution"
     }
   }
 }

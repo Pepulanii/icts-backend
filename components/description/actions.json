@@ -2,7 +2,8 @@
   "collectionName": "components_description_actions",
   "info": {
     "name": "actions",
-    "icon": "ad"
+    "icon": "ad",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -10,7 +11,7 @@
       "type": "text"
     },
     "actionTaken": {
-      "type": "string"
+      "type": "text"
     },
     "responsible": {
       "type": "string"
