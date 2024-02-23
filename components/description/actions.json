@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_description_actions",
+  "info": {
+    "name": "actions",
+    "icon": "ad"
+  },
+  "options": {},
+  "attributes": {
+    "actionRequired": {
+      "type": "text"
+    },
+    "actionTaken": {
+      "type": "string"
+    },
+    "responsible": {
+      "type": "string"
+    }
+  }
+}

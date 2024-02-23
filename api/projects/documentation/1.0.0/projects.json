@@ -548,6 +548,29 @@
             "type": "string",
             "format": "date"
           },
+          "actions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "actionRequired": {
+                  "type": "string"
+                },
+                "actionTaken": {
+                  "type": "string"
+                },
+                "responsible": {
+                  "type": "string"
+                }
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -581,6 +604,29 @@
           "End_Date": {
             "type": "string",
             "format": "date"
+          },
+          "actions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "actionRequired": {
+                  "type": "string"
+                },
+                "actionTaken": {
+                  "type": "string"
+                },
+                "responsible": {
+                  "type": "string"
+                }
+              }
+            }
           },
           "published_at": {
             "type": "string",

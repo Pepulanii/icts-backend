@@ -35,6 +35,11 @@
     },
     "End_Date": {
       "type": "date"
+    },
+    "actions": {
+      "type": "component",
+      "repeatable": true,
+      "component": "description.actions"
     }
   }
 }
