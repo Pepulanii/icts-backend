@@ -567,6 +567,10 @@
                 },
                 "responsible": {
                   "type": "string"
+                },
+                "dueDate": {
+                  "type": "string",
+                  "format": "date"
                 }
               }
             }
@@ -707,6 +711,10 @@
                 },
                 "responsible": {
                   "type": "string"
+                },
+                "dueDate": {
+                  "type": "string",
+                  "format": "date"
                 }
               }
             }
