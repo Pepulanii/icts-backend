@@ -25,9 +25,17 @@
     "Phone": {
       "type": "string"
     },
-    "mis": {
-      "via": "agency",
-      "collection": "mis"
+    "Services": {
+      "collection": "service",
+      "via": "Agency"
+    },
+    "Ministry": {
+      "via": "Agencies",
+      "model": "ministries"
+    },
+    "Mis": {
+      "collection": "mis",
+      "via": "Agency"
     }
   }
 }

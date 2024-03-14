@@ -1,0 +1,63 @@
+{
+  "kind": "collectionType",
+  "collectionName": "services",
+  "info": {
+    "name": "Services",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "ServiceProvided": {
+      "type": "text"
+    },
+    "ProvisionMode": {
+      "type": "enumeration",
+      "enum": [
+        "Manual",
+        "Digital",
+        "Hybrid"
+      ]
+    },
+    "Consumer": {
+      "type": "enumeration",
+      "enum": [
+        "G2G",
+        "G2B",
+        "G2C"
+      ]
+    },
+    "OnGSB": {
+      "type": "boolean"
+    },
+    "OnBoardingPriority": {
+      "type": "enumeration",
+      "enum": [
+        "Low",
+        "Mid",
+        "High"
+      ]
+    },
+    "Mis": {
+      "type": "string"
+    },
+    "Recommendation": {
+      "type": "text"
+    },
+    "Agency": {
+      "via": "Services",
+      "model": "agency"
+    },
+    "Ministry": {
+      "via": "Services",
+      "model": "ministries"
+    }
+  }
+}
