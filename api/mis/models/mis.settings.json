@@ -68,10 +68,6 @@
     "Status": {
       "type": "string"
     },
-    "agency": {
-      "via": "mis",
-      "model": "agency"
-    },
     "e_services": {
       "via": "mi",
       "collection": "e-services"
@@ -94,6 +90,10 @@
     },
     "ProjectOwner": {
       "type": "string"
+    },
+    "Agency": {
+      "via": "Mis",
+      "model": "agency"
     }
   }
 }

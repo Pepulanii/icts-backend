@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/institutions": {
+    "/ministries": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find all the ministries's records",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve ministries document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Institution"
+                    "$ref": "#/components/schemas/Ministries"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Institution"
+          "Ministries"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new record",
+        "description": "Create a new ministries record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve ministries document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Institution"
+                  "$ref": "#/components/schemas/Ministries"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Institution"
+          "Ministries"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewInstitution"
+                "$ref": "#/components/schemas/NewMinistries"
               }
             }
           }
         }
       }
     },
-    "/institutions/count": {
+    "/ministries/count": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Retrieve the number of ministries documents",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve ministries document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Institution"
+          "Ministries"
         ],
         "parameters": []
       }
     },
-    "/institutions/{id}": {
+    "/ministries/{id}": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find one ministries record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve ministries document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Institution"
+                  "$ref": "#/components/schemas/Ministries"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Institution"
+          "Ministries"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a record",
+        "description": "Update a single ministries record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve ministries document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Institution"
+                  "$ref": "#/components/schemas/Ministries"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Institution"
+          "Ministries"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewInstitution"
+                "$ref": "#/components/schemas/NewMinistries"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a record",
+        "description": "Delete a single ministries record",
         "responses": {
           "200": {
-            "description": "deletes a single record based on the ID supplied",
+            "description": "deletes a single ministries based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Institution"
+          "Ministries"
         ],
         "parameters": [
           {
@@ -514,10 +514,9 @@
   },
   "components": {
     "schemas": {
-      "Institution": {
+      "Ministries": {
         "required": [
-          "id",
-          "Name"
+          "id"
         ],
         "properties": {
           "id": {
@@ -526,16 +525,7 @@
           "Name": {
             "type": "string"
           },
-          "Mandate": {
-            "type": "string"
-          },
-          "Vision": {
-            "type": "string"
-          },
-          "Mission": {
-            "type": "string"
-          },
-          "mis": {
+          "Agencies": {
             "type": "array",
             "items": {
               "required": [
@@ -549,399 +539,95 @@
                 "Name": {
                   "type": "string"
                 },
-                "institution": {
+                "URL": {
                   "type": "string"
                 },
-                "Description": {
+                "Address": {
                   "type": "string"
                 },
-                "Launch": {
+                "Phone": {
                   "type": "string"
                 },
-                "Serial": {
-                  "type": "string"
-                },
-                "Location": {
-                  "type": "string"
-                },
-                "Platform": {
-                  "type": "string"
-                },
-                "Developer": {
-                  "type": "string"
-                },
-                "SourceCode": {
-                  "type": "string"
-                },
-                "LicencingCost": {
-                  "type": "number"
-                },
-                "AnnualRevenue": {
-                  "type": "number"
-                },
-                "Users": {
-                  "type": "integer"
-                },
-                "url": {
-                  "type": "string"
-                },
-                "Access": {
-                  "type": "string"
-                },
-                "ServiceType": {
-                  "type": "string"
-                },
-                "SysType": {
-                  "type": "string"
-                },
-                "Mobile": {
-                  "type": "string"
-                },
-                "Status": {
-                  "type": "string"
-                },
-                "e_services": {
+                "Services": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
                 },
-                "documentations": {
+                "Ministry": {
+                  "type": "string"
+                },
+                "Mis": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
                 },
-                "doc": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
+                "published_at": {
+                  "type": "string"
                 },
-                "ProjectOwner": {
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "Services": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "Name": {
+                  "type": "string"
+                },
+                "ServiceProvided": {
+                  "type": "string"
+                },
+                "ProvisionMode": {
+                  "type": "string",
+                  "enum": [
+                    "Manual",
+                    "Digital",
+                    "Hybrid"
+                  ]
+                },
+                "Consumer": {
+                  "type": "string",
+                  "enum": [
+                    "G2G",
+                    "G2B",
+                    "G2C"
+                  ]
+                },
+                "OnGSB": {
+                  "type": "boolean"
+                },
+                "OnBoardingPriority": {
+                  "type": "string",
+                  "enum": [
+                    "Low",
+                    "Mid",
+                    "High"
+                  ]
+                },
+                "Mis": {
+                  "type": "string"
+                },
+                "Recommendation": {
                   "type": "string"
                 },
                 "Agency": {
                   "type": "string"
                 },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "website": {
-            "type": "string"
-          },
-          "e_services": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "Name": {
-                  "type": "string"
-                },
-                "Description": {
-                  "type": "string"
-                },
-                "institution": {
-                  "type": "string"
-                },
-                "Status": {
-                  "type": "string",
-                  "enum": [
-                    "OPERATIONAL",
-                    "OFFLINE"
-                  ]
-                },
-                "url": {
-                  "type": "string"
-                },
-                "mi": {
-                  "type": "string"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "mobile_services": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "Name": {
-                  "type": "string"
-                },
-                "Description": {
-                  "type": "string"
-                },
-                "ussd": {
-                  "type": "string"
-                },
-                "Year": {
-                  "type": "string"
-                },
-                "institution": {
-                  "type": "string"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "phone": {
-            "type": "string"
-          },
-          "proposed_systems": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "userType": {
-                  "type": "string"
-                },
-                "serviceType": {
-                  "type": "string"
-                },
-                "access": {
-                  "type": "string"
-                },
-                "objective": {
-                  "type": "string"
-                },
-                "institution": {
-                  "type": "string"
-                },
-                "misAvailable": {
-                  "type": "string"
-                },
-                "features": {
-                  "type": "component"
-                },
-                "challenges": {
-                  "type": "component"
-                },
-                "proposed_sys_comments": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "status": {
-                  "type": "string"
-                },
-                "development": {
-                  "type": "string"
-                },
-                "proposed_docs": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "team": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "Name": {
-                "type": "string"
-              },
-              "institutions": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "provinces": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "job_descriptions": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "JobTitle": {
-                  "type": "string"
-                },
-                "Grade": {
-                  "type": "string"
-                },
-                "institution": {
-                  "type": "string"
-                },
-                "section": {
-                  "type": "string"
-                },
-                "JobPurpose": {
-                  "type": "string"
-                },
-                "reports_to": {
-                  "type": "string"
-                },
-                "Responsibilities": {
-                  "type": "component"
-                },
-                "minimum_education": {
-                  "type": "string"
-                },
-                "minimum_vocational": {
-                  "type": "string"
-                },
-                "pre_job_experience": {
-                  "type": "integer"
-                },
-                "written_skills": {
-                  "type": "string"
-                },
-                "oral_skills": {
-                  "type": "string"
-                },
-                "user": {
-                  "type": "string"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "sections": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "purpose": {
-                  "type": "string"
-                },
-                "institution": {
-                  "type": "string"
-                },
-                "job_descriptions": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "msites": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "url": {
-                  "type": "string"
-                },
-                "institution": {
+                "Ministry": {
                   "type": "string"
                 },
                 "published_at": {
@@ -962,69 +648,18 @@
           }
         }
       },
-      "NewInstitution": {
-        "required": [
-          "Name"
-        ],
+      "NewMinistries": {
         "properties": {
           "Name": {
             "type": "string"
           },
-          "Mandate": {
-            "type": "string"
-          },
-          "Vision": {
-            "type": "string"
-          },
-          "Mission": {
-            "type": "string"
-          },
-          "mis": {
+          "Agencies": {
             "type": "array",
             "items": {
               "type": "string"
             }
           },
-          "website": {
-            "type": "string"
-          },
-          "e_services": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "mobile_services": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "phone": {
-            "type": "string"
-          },
-          "proposed_systems": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "team": {
-            "type": "string"
-          },
-          "job_descriptions": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "sections": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "msites": {
+          "Services": {
             "type": "array",
             "items": {
               "type": "string"
@@ -1046,7 +681,7 @@
   },
   "tags": [
     {
-      "name": "Institution"
+      "name": "Ministries"
     }
   ]
 }
