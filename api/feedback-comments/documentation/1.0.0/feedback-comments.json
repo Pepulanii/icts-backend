@@ -262,7 +262,7 @@
     "/feedback-comments/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the number of feedback-comments documents",
+        "description": "Retrieve the numver of feedback-comments documents",
         "responses": {
           "200": {
             "description": "Retrieve feedback-comments document(s)",
