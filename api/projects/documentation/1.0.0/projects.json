@@ -658,6 +658,15 @@
               }
             }
           },
+          "Priority": {
+            "type": "string",
+            "default": "Low",
+            "enum": [
+              "Low",
+              "Medium",
+              "High"
+            ]
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -721,6 +730,15 @@
           },
           "institution": {
             "type": "string"
+          },
+          "Priority": {
+            "type": "string",
+            "default": "Low",
+            "enum": [
+              "Low",
+              "Medium",
+              "High"
+            ]
           },
           "published_at": {
             "type": "string",

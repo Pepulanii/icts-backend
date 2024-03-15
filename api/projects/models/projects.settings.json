@@ -43,6 +43,15 @@
     },
     "institution": {
       "model": "institution"
+    },
+    "Priority": {
+      "type": "enumeration",
+      "enum": [
+        "Low",
+        "Medium",
+        "High"
+      ],
+      "default": "Low"
     }
   }
 }
