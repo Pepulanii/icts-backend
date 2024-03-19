@@ -257,7 +257,7 @@
     "/ministries/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the number of ministries documents",
+        "description": "Retrieve the numver of ministries documents",
         "responses": {
           "200": {
             "description": "Retrieve ministries document(s)",

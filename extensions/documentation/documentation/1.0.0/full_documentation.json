@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "03/15/2024 11:56:03 AM"
+    "x-generation-date": "03/15/2024 12:10:37 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -6001,7 +6001,7 @@
     "/ministries/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the number of ministries documents",
+        "description": "Retrieve the numver of ministries documents",
         "responses": {
           "200": {
             "description": "Retrieve ministries document(s)",
