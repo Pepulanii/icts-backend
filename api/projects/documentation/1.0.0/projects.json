@@ -728,6 +728,14 @@
               }
             }
           },
+          "Priority": {
+            "type": "string",
+            "enum": [
+              "Low",
+              "Medium",
+              "High"
+            ]
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -791,6 +799,14 @@
           },
           "institution": {
             "type": "string"
+          },
+          "Priority": {
+            "type": "string",
+            "enum": [
+              "Low",
+              "Medium",
+              "High"
+            ]
           },
           "published_at": {
             "type": "string",

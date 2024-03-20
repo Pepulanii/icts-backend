@@ -257,7 +257,7 @@
     "/mis/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of mis documents",
+        "description": "Retrieve the number of mis documents",
         "responses": {
           "200": {
             "description": "Retrieve mis document(s)",

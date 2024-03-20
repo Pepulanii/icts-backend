@@ -55,6 +55,14 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
+    },
+    "Priority": {
+      "type": "enumeration",
+      "enum": [
+        "Low",
+        "Medium",
+        "High"
+      ]
     }
   }
 }
