@@ -257,7 +257,7 @@
     "/mis/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the number of mis documents",
+        "description": "Retrieve the numver of mis documents",
         "responses": {
           "200": {
             "description": "Retrieve mis document(s)",
@@ -658,44 +658,6 @@
           "Status": {
             "type": "string"
           },
-          "agency": {
-            "required": [
-              "id",
-              "Name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "Name": {
-                "type": "string"
-              },
-              "URL": {
-                "type": "string"
-              },
-              "Address": {
-                "type": "string"
-              },
-              "Phone": {
-                "type": "string"
-              },
-              "mis": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
           "e_services": {
             "type": "array",
             "items": {
@@ -847,6 +809,53 @@
           "ProjectOwner": {
             "type": "string"
           },
+          "Agency": {
+            "required": [
+              "id",
+              "Name"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "Name": {
+                "type": "string"
+              },
+              "URL": {
+                "type": "string"
+              },
+              "Address": {
+                "type": "string"
+              },
+              "Phone": {
+                "type": "string"
+              },
+              "Services": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "Ministry": {
+                "type": "string"
+              },
+              "Mis": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -913,9 +922,6 @@
           "Status": {
             "type": "string"
           },
-          "agency": {
-            "type": "string"
-          },
           "e_services": {
             "type": "array",
             "items": {
@@ -929,6 +935,9 @@
             }
           },
           "ProjectOwner": {
+            "type": "string"
+          },
+          "Agency": {
             "type": "string"
           },
           "published_at": {

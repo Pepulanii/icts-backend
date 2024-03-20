@@ -1,19 +1,18 @@
 {
   "paths": {
-    "/feedback-comments": {
+    "/services": {
       "get": {
         "deprecated": false,
-        "description": "Find all the feedback-comments's records",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve feedback-comments document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Service"
                   }
                 }
               }
@@ -52,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Feedback-comments"
+          "Service"
         ],
         "parameters": [
           {
@@ -195,18 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new feedback-comments record",
+        "description": "Create a new record",
         "responses": {
           "200": {
-            "description": "Retrieve feedback-comments document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Service"
                 }
               }
             }
@@ -244,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Feedback-comments"
+          "Service"
         ],
         "requestBody": {
           "description": "",
@@ -252,26 +247,26 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewFeedback-comments"
+                "$ref": "#/components/schemas/NewService"
               }
             }
           }
         }
       }
     },
-    "/feedback-comments/count": {
+    "/services/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of feedback-comments documents",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve feedback-comments document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
                   "properties": {
-                    "foo": {
-                      "type": "string"
+                    "count": {
+                      "type": "integer"
                     }
                   }
                 }
@@ -311,26 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Feedback-comments"
+          "Service"
         ],
         "parameters": []
       }
     },
-    "/feedback-comments/{id}": {
+    "/services/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one feedback-comments record",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve feedback-comments document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Service"
                 }
               }
             }
@@ -368,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Feedback-comments"
+          "Service"
         ],
         "parameters": [
           {
@@ -385,18 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single feedback-comments record",
+        "description": "Update a record",
         "responses": {
           "200": {
-            "description": "Retrieve feedback-comments document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Service"
                 }
               }
             }
@@ -434,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Feedback-comments"
+          "Service"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewFeedback-comments"
+                "$ref": "#/components/schemas/NewService"
               }
             }
           }
@@ -462,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single feedback-comments record",
+        "description": "Delete a record",
         "responses": {
           "200": {
-            "description": "deletes a single feedback-comments based on the ID supplied",
+            "description": "deletes a single record based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -508,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Feedback-comments"
+          "Service"
         ],
         "parameters": [
           {
@@ -527,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Feedback-comments": {
+      "Service": {
         "required": [
           "id"
         ],
@@ -535,13 +522,93 @@
           "id": {
             "type": "string"
           },
-          "comment": {
+          "Name": {
             "type": "string"
           },
-          "user_id": {
-            "type": "integer"
+          "ServiceProvided": {
+            "type": "string"
           },
-          "feedback_topic": {
+          "ProvisionMode": {
+            "type": "string",
+            "enum": [
+              "Manual",
+              "Digital",
+              "Hybrid"
+            ]
+          },
+          "Consumer": {
+            "type": "string",
+            "enum": [
+              "G2G",
+              "G2B",
+              "G2C"
+            ]
+          },
+          "OnGSB": {
+            "type": "boolean"
+          },
+          "OnBoardingPriority": {
+            "type": "string",
+            "enum": [
+              "Low",
+              "Mid",
+              "High"
+            ]
+          },
+          "Mis": {
+            "type": "string"
+          },
+          "Recommendation": {
+            "type": "string"
+          },
+          "Agency": {
+            "required": [
+              "id",
+              "Name"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "Name": {
+                "type": "string"
+              },
+              "URL": {
+                "type": "string"
+              },
+              "Address": {
+                "type": "string"
+              },
+              "Phone": {
+                "type": "string"
+              },
+              "Services": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "Ministry": {
+                "type": "string"
+              },
+              "Mis": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "Ministry": {
             "required": [
               "id"
             ],
@@ -549,19 +616,16 @@
               "id": {
                 "type": "string"
               },
-              "topic": {
+              "Name": {
                 "type": "string"
               },
-              "user_id": {
-                "type": "integer"
+              "Agencies": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
-              "desc": {
-                "type": "string"
-              },
-              "votes": {
-                "type": "component"
-              },
-              "feedback_comments": {
+              "Services": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -584,15 +648,51 @@
           }
         }
       },
-      "NewFeedback-comments": {
+      "NewService": {
         "properties": {
-          "comment": {
+          "Name": {
             "type": "string"
           },
-          "user_id": {
-            "type": "integer"
+          "ServiceProvided": {
+            "type": "string"
           },
-          "feedback_topic": {
+          "ProvisionMode": {
+            "type": "string",
+            "enum": [
+              "Manual",
+              "Digital",
+              "Hybrid"
+            ]
+          },
+          "Consumer": {
+            "type": "string",
+            "enum": [
+              "G2G",
+              "G2B",
+              "G2C"
+            ]
+          },
+          "OnGSB": {
+            "type": "boolean"
+          },
+          "OnBoardingPriority": {
+            "type": "string",
+            "enum": [
+              "Low",
+              "Mid",
+              "High"
+            ]
+          },
+          "Mis": {
+            "type": "string"
+          },
+          "Recommendation": {
+            "type": "string"
+          },
+          "Agency": {
+            "type": "string"
+          },
+          "Ministry": {
             "type": "string"
           },
           "published_at": {
@@ -609,5 +709,9 @@
       }
     }
   },
-  "tags": []
+  "tags": [
+    {
+      "name": "Service"
+    }
+  ]
 }

@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ministries",
+  "info": {
+    "name": "Ministries",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Agencies": {
+      "via": "Ministry",
+      "collection": "agency"
+    },
+    "Services": {
+      "collection": "service",
+      "via": "Ministry"
+    }
+  }
+}

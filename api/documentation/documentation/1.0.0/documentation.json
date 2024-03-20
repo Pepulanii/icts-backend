@@ -588,9 +588,6 @@
               "Status": {
                 "type": "string"
               },
-              "agency": {
-                "type": "string"
-              },
               "e_services": {
                 "type": "array",
                 "items": {
@@ -610,6 +607,9 @@
                 }
               },
               "ProjectOwner": {
+                "type": "string"
+              },
+              "Agency": {
                 "type": "string"
               },
               "published_at": {

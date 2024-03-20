@@ -535,7 +535,108 @@
           "Phone": {
             "type": "string"
           },
-          "mis": {
+          "Services": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "Name": {
+                  "type": "string"
+                },
+                "ServiceProvided": {
+                  "type": "string"
+                },
+                "ProvisionMode": {
+                  "type": "string",
+                  "enum": [
+                    "Manual",
+                    "Digital",
+                    "Hybrid"
+                  ]
+                },
+                "Consumer": {
+                  "type": "string",
+                  "enum": [
+                    "G2G",
+                    "G2B",
+                    "G2C"
+                  ]
+                },
+                "OnGSB": {
+                  "type": "boolean"
+                },
+                "OnBoardingPriority": {
+                  "type": "string",
+                  "enum": [
+                    "Low",
+                    "Mid",
+                    "High"
+                  ]
+                },
+                "Mis": {
+                  "type": "string"
+                },
+                "Recommendation": {
+                  "type": "string"
+                },
+                "Agency": {
+                  "type": "string"
+                },
+                "Ministry": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "Ministry": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "Name": {
+                "type": "string"
+              },
+              "Agencies": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "Services": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "Mis": {
             "type": "array",
             "items": {
               "required": [
@@ -600,9 +701,6 @@
                 "Status": {
                   "type": "string"
                 },
-                "agency": {
-                  "type": "string"
-                },
                 "e_services": {
                   "type": "array",
                   "items": {
@@ -622,6 +720,9 @@
                   }
                 },
                 "ProjectOwner": {
+                  "type": "string"
+                },
+                "Agency": {
                   "type": "string"
                 },
                 "published_at": {
@@ -659,7 +760,16 @@
           "Phone": {
             "type": "string"
           },
-          "mis": {
+          "Services": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "Ministry": {
+            "type": "string"
+          },
+          "Mis": {
             "type": "array",
             "items": {
               "type": "string"

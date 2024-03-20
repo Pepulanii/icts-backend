@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/ministries",
+      "handler": "ministries.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/ministries/count",
+      "handler": "ministries.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/ministries/:id",
+      "handler": "ministries.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/ministries",
+      "handler": "ministries.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/ministries/:id",
+      "handler": "ministries.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/ministries/:id",
+      "handler": "ministries.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

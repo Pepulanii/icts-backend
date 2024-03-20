@@ -1,19 +1,18 @@
 {
   "paths": {
-    "/feedback-comments": {
+    "/ministries": {
       "get": {
         "deprecated": false,
-        "description": "Find all the feedback-comments's records",
+        "description": "Find all the ministries's records",
         "responses": {
           "200": {
-            "description": "Retrieve feedback-comments document(s)",
+            "description": "Retrieve ministries document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Ministries"
                   }
                 }
               }
@@ -52,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Feedback-comments"
+          "Ministries"
         ],
         "parameters": [
           {
@@ -195,18 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new feedback-comments record",
+        "description": "Create a new ministries record",
         "responses": {
           "200": {
-            "description": "Retrieve feedback-comments document(s)",
+            "description": "Retrieve ministries document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Ministries"
                 }
               }
             }
@@ -244,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Feedback-comments"
+          "Ministries"
         ],
         "requestBody": {
           "description": "",
@@ -252,26 +247,26 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewFeedback-comments"
+                "$ref": "#/components/schemas/NewMinistries"
               }
             }
           }
         }
       }
     },
-    "/feedback-comments/count": {
+    "/ministries/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of feedback-comments documents",
+        "description": "Retrieve the numver of ministries documents",
         "responses": {
           "200": {
-            "description": "Retrieve feedback-comments document(s)",
+            "description": "Retrieve ministries document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "properties": {
-                    "foo": {
-                      "type": "string"
+                    "count": {
+                      "type": "integer"
                     }
                   }
                 }
@@ -311,26 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Feedback-comments"
+          "Ministries"
         ],
         "parameters": []
       }
     },
-    "/feedback-comments/{id}": {
+    "/ministries/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one feedback-comments record",
+        "description": "Find one ministries record",
         "responses": {
           "200": {
-            "description": "Retrieve feedback-comments document(s)",
+            "description": "Retrieve ministries document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Ministries"
                 }
               }
             }
@@ -368,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Feedback-comments"
+          "Ministries"
         ],
         "parameters": [
           {
@@ -385,18 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single feedback-comments record",
+        "description": "Update a single ministries record",
         "responses": {
           "200": {
-            "description": "Retrieve feedback-comments document(s)",
+            "description": "Retrieve ministries document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Ministries"
                 }
               }
             }
@@ -434,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Feedback-comments"
+          "Ministries"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewFeedback-comments"
+                "$ref": "#/components/schemas/NewMinistries"
               }
             }
           }
@@ -462,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single feedback-comments record",
+        "description": "Delete a single ministries record",
         "responses": {
           "200": {
-            "description": "deletes a single feedback-comments based on the ID supplied",
+            "description": "deletes a single ministries based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -508,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Feedback-comments"
+          "Ministries"
         ],
         "parameters": [
           {
@@ -527,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Feedback-comments": {
+      "Ministries": {
         "required": [
           "id"
         ],
@@ -535,46 +522,123 @@
           "id": {
             "type": "string"
           },
-          "comment": {
+          "Name": {
             "type": "string"
           },
-          "user_id": {
-            "type": "integer"
-          },
-          "feedback_topic": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "topic": {
-                "type": "string"
-              },
-              "user_id": {
-                "type": "integer"
-              },
-              "desc": {
-                "type": "string"
-              },
-              "votes": {
-                "type": "component"
-              },
-              "feedback_comments": {
-                "type": "array",
-                "items": {
+          "Agencies": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "Name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "Name": {
+                  "type": "string"
+                },
+                "URL": {
+                  "type": "string"
+                },
+                "Address": {
+                  "type": "string"
+                },
+                "Phone": {
+                  "type": "string"
+                },
+                "Services": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "Ministry": {
+                  "type": "string"
+                },
+                "Mis": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
                   "type": "string"
                 }
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
+              }
+            }
+          },
+          "Services": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "Name": {
+                  "type": "string"
+                },
+                "ServiceProvided": {
+                  "type": "string"
+                },
+                "ProvisionMode": {
+                  "type": "string",
+                  "enum": [
+                    "Manual",
+                    "Digital",
+                    "Hybrid"
+                  ]
+                },
+                "Consumer": {
+                  "type": "string",
+                  "enum": [
+                    "G2G",
+                    "G2B",
+                    "G2C"
+                  ]
+                },
+                "OnGSB": {
+                  "type": "boolean"
+                },
+                "OnBoardingPriority": {
+                  "type": "string",
+                  "enum": [
+                    "Low",
+                    "Mid",
+                    "High"
+                  ]
+                },
+                "Mis": {
+                  "type": "string"
+                },
+                "Recommendation": {
+                  "type": "string"
+                },
+                "Agency": {
+                  "type": "string"
+                },
+                "Ministry": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -584,16 +648,22 @@
           }
         }
       },
-      "NewFeedback-comments": {
+      "NewMinistries": {
         "properties": {
-          "comment": {
+          "Name": {
             "type": "string"
           },
-          "user_id": {
-            "type": "integer"
+          "Agencies": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
-          "feedback_topic": {
-            "type": "string"
+          "Services": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "published_at": {
             "type": "string",
@@ -609,5 +679,9 @@
       }
     }
   },
-  "tags": []
+  "tags": [
+    {
+      "name": "Ministries"
+    }
+  ]
 }
