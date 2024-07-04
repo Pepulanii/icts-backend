@@ -14,7 +14,11 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
+<<<<<<< Updated upstream
     "x-generation-date": "07/04/2024 8:10:17 AM"
+=======
+    "x-generation-date": "03/15/2024 10:58:06 AM"
+>>>>>>> Stashed changes
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -2875,7 +2879,7 @@
     "/e-services/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the number of e-services documents",
+        "description": "Retrieve the numver of e-services documents",
         "responses": {
           "200": {
             "description": "Retrieve e-services document(s)",
@@ -3399,7 +3403,7 @@
     "/feedback-comments/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the number of feedback-comments documents",
+        "description": "Retrieve the numver of feedback-comments documents",
         "responses": {
           "200": {
             "description": "Retrieve feedback-comments document(s)",
@@ -6001,7 +6005,7 @@
     "/messages/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the number of messages documents",
+        "description": "Retrieve the numver of messages documents",
         "responses": {
           "200": {
             "description": "Retrieve messages document(s)",
@@ -7023,7 +7027,7 @@
     "/mis/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the number of mis documents",
+        "description": "Retrieve the numver of mis documents",
         "responses": {
           "200": {
             "description": "Retrieve mis document(s)",
@@ -7539,7 +7543,7 @@
     "/mobile-services/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the number of mobile-services documents",
+        "description": "Retrieve the numver of mobile-services documents",
         "responses": {
           "200": {
             "description": "Retrieve mobile-services document(s)",
@@ -8058,7 +8062,7 @@
     "/msites/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the number of msites documents",
+        "description": "Retrieve the numver of msites documents",
         "responses": {
           "200": {
             "description": "Retrieve msites document(s)",
@@ -8569,7 +8573,7 @@
     "/notifications/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the number of notifications documents",
+        "description": "Retrieve the numver of notifications documents",
         "responses": {
           "200": {
             "description": "Retrieve notifications document(s)",
@@ -10710,7 +10714,7 @@
     "/projects/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the number of projects documents",
+        "description": "Retrieve the numver of projects documents",
         "responses": {
           "200": {
             "description": "Retrieve projects document(s)",
@@ -11226,7 +11230,7 @@
     "/proposed-docs/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the number of proposed-docs documents",
+        "description": "Retrieve the numver of proposed-docs documents",
         "responses": {
           "200": {
             "description": "Retrieve proposed-docs document(s)",
@@ -11750,7 +11754,7 @@
     "/proposed-sys-comments/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the number of proposed-sys-comments documents",
+        "description": "Retrieve the numver of proposed-sys-comments documents",
         "responses": {
           "200": {
             "description": "Retrieve proposed-sys-comments document(s)",
@@ -12274,7 +12278,7 @@
     "/proposed-systems/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the number of proposed-systems documents",
+        "description": "Retrieve the numver of proposed-systems documents",
         "responses": {
           "200": {
             "description": "Retrieve proposed-systems document(s)",
@@ -12793,7 +12797,7 @@
     "/provinces/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the number of provinces documents",
+        "description": "Retrieve the numver of provinces documents",
         "responses": {
           "200": {
             "description": "Retrieve provinces document(s)",
@@ -14326,7 +14330,7 @@
     "/teams/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the number of teams documents",
+        "description": "Retrieve the numver of teams documents",
         "responses": {
           "200": {
             "description": "Retrieve teams document(s)",

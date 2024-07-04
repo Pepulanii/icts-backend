@@ -257,7 +257,7 @@
     "/messages/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the number of messages documents",
+        "description": "Retrieve the numver of messages documents",
         "responses": {
           "200": {
             "description": "Retrieve messages document(s)",

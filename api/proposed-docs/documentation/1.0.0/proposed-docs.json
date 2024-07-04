@@ -262,7 +262,7 @@
     "/proposed-docs/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the number of proposed-docs documents",
+        "description": "Retrieve the numver of proposed-docs documents",
         "responses": {
           "200": {
             "description": "Retrieve proposed-docs document(s)",

@@ -257,7 +257,7 @@
     "/msites/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the number of msites documents",
+        "description": "Retrieve the numver of msites documents",
         "responses": {
           "200": {
             "description": "Retrieve msites document(s)",

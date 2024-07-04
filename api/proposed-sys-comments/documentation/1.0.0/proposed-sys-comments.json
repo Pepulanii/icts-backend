@@ -262,7 +262,7 @@
     "/proposed-sys-comments/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the number of proposed-sys-comments documents",
+        "description": "Retrieve the numver of proposed-sys-comments documents",
         "responses": {
           "200": {
             "description": "Retrieve proposed-sys-comments document(s)",

@@ -262,7 +262,7 @@
     "/e-services/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the number of e-services documents",
+        "description": "Retrieve the numver of e-services documents",
         "responses": {
           "200": {
             "description": "Retrieve e-services document(s)",

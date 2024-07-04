@@ -257,7 +257,7 @@
     "/provinces/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the number of provinces documents",
+        "description": "Retrieve the numver of provinces documents",
         "responses": {
           "200": {
             "description": "Retrieve provinces document(s)",

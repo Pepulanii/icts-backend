@@ -257,7 +257,7 @@
     "/teams/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the number of teams documents",
+        "description": "Retrieve the numver of teams documents",
         "responses": {
           "200": {
             "description": "Retrieve teams document(s)",
