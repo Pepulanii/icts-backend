@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "outcomes",
+  "info": {
+    "name": "Outcomes"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "thematic_area": {
+      "model": "thematic-areas",
+      "via": "outcomes"
+    }
+  }
+}

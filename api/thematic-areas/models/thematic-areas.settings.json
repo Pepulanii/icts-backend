@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "thematic_areas",
+  "info": {
+    "name": "Thematic Areas"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "outcomes": {
+      "via": "thematic_area",
+      "collection": "outcomes"
+    },
+    "output_targets": {
+      "via": "thematic_area",
+      "collection": "output-targets"
+    }
+  }
+}
