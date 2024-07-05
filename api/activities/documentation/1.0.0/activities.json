@@ -567,6 +567,16 @@
           "responsible": {
             "type": "string"
           },
+          "duedate": {
+            "type": "string",
+            "format": "date"
+          },
+          "comments": {
+            "type": "string"
+          },
+          "author": {
+            "type": "string"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -590,6 +600,16 @@
             ]
           },
           "responsible": {
+            "type": "string"
+          },
+          "duedate": {
+            "type": "string",
+            "format": "date"
+          },
+          "comments": {
+            "type": "string"
+          },
+          "author": {
             "type": "string"
           },
           "published_at": {

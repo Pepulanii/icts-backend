@@ -29,6 +29,15 @@
     },
     "responsible": {
       "type": "string"
+    },
+    "duedate": {
+      "type": "date"
+    },
+    "comments": {
+      "type": "richtext"
+    },
+    "author": {
+      "type": "string"
     }
   }
 }
