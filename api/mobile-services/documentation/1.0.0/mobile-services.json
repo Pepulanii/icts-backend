@@ -262,7 +262,7 @@
     "/mobile-services/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of mobile-services documents",
+        "description": "Retrieve the number of mobile-services documents",
         "responses": {
           "200": {
             "description": "Retrieve mobile-services document(s)",

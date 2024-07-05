@@ -257,7 +257,7 @@
     "/projects/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of projects documents",
+        "description": "Retrieve the number of projects documents",
         "responses": {
           "200": {
             "description": "Retrieve projects document(s)",

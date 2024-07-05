@@ -18,6 +18,14 @@
     "output_target": {
       "model": "output-targets",
       "via": "activities"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "Pending",
+        "Underway",
+        "Completed"
+      ]
     }
   }
 }

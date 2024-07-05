@@ -588,6 +588,14 @@
                 "output_target": {
                   "type": "string"
                 },
+                "status": {
+                  "type": "string",
+                  "enum": [
+                    "Pending",
+                    "Underway",
+                    "Completed"
+                  ]
+                },
                 "published_at": {
                   "type": "string"
                 },
