@@ -564,6 +564,9 @@
               "Completed"
             ]
           },
+          "responsible": {
+            "type": "string"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -585,6 +588,9 @@
               "Underway",
               "Completed"
             ]
+          },
+          "responsible": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",

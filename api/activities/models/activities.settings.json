@@ -26,6 +26,9 @@
         "Underway",
         "Completed"
       ]
+    },
+    "responsible": {
+      "type": "string"
     }
   }
 }
