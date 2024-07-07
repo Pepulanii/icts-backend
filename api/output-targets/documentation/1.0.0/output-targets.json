@@ -602,12 +602,6 @@
                 "duedate": {
                   "type": "string"
                 },
-                "comments": {
-                  "type": "string"
-                },
-                "author": {
-                  "type": "string"
-                },
                 "published_at": {
                   "type": "string"
                 },
