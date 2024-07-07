@@ -32,6 +32,9 @@
     },
     "duedate": {
       "type": "date"
+    },
+    "comments": {
+      "type": "richtext"
     }
   }
 }

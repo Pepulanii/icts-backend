@@ -602,6 +602,9 @@
                 "duedate": {
                   "type": "string"
                 },
+                "comments": {
+                  "type": "string"
+                },
                 "published_at": {
                   "type": "string"
                 },

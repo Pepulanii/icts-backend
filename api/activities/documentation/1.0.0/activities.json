@@ -571,6 +571,9 @@
             "type": "string",
             "format": "date"
           },
+          "comments": {
+            "type": "string"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -599,6 +602,9 @@
           "duedate": {
             "type": "string",
             "format": "date"
+          },
+          "comments": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",
