@@ -599,6 +599,9 @@
                 "responsible": {
                   "type": "string"
                 },
+                "duedate": {
+                  "type": "string"
+                },
                 "published_at": {
                   "type": "string"
                 },

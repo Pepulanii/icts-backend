@@ -567,6 +567,10 @@
           "responsible": {
             "type": "string"
           },
+          "duedate": {
+            "type": "string",
+            "format": "date"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -591,6 +595,10 @@
           },
           "responsible": {
             "type": "string"
+          },
+          "duedate": {
+            "type": "string",
+            "format": "date"
           },
           "published_at": {
             "type": "string",

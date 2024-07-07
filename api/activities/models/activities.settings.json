@@ -29,6 +29,9 @@
     },
     "responsible": {
       "type": "string"
+    },
+    "duedate": {
+      "type": "date"
     }
   }
 }
