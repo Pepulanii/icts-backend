@@ -1,18 +1,19 @@
 {
   "paths": {
-    "/mis": {
+    "/thematic-areas": {
       "get": {
         "deprecated": false,
-        "description": "Find all the mis's records",
+        "description": "Find all the thematic-areas's records",
         "responses": {
           "200": {
-            "description": "Retrieve mis document(s)",
+            "description": "Retrieve thematic-areas document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Mis"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
                   }
                 }
               }
@@ -51,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Mis"
+          "Thematic-areas"
         ],
         "parameters": [
           {
@@ -194,79 +195,16 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new mis record",
+        "description": "Create a new thematic-areas record",
         "responses": {
           "200": {
-            "description": "Retrieve mis document(s)",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Mis"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Mis"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewMis"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/mis/count": {
-      "get": {
-        "deprecated": false,
-        "description": "Retrieve the number of mis documents",
-        "responses": {
-          "200": {
-            "description": "Retrieve mis document(s)",
+            "description": "Retrieve thematic-areas document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "properties": {
-                    "count": {
-                      "type": "integer"
+                    "foo": {
+                      "type": "string"
                     }
                   }
                 }
@@ -306,22 +244,36 @@
         },
         "summary": "",
         "tags": [
-          "Mis"
+          "Thematic-areas"
         ],
-        "parameters": []
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewThematic-areas"
+              }
+            }
+          }
+        }
       }
     },
-    "/mis/{id}": {
+    "/thematic-areas/count": {
       "get": {
         "deprecated": false,
-        "description": "Find one mis record",
+        "description": "Retrieve the number of thematic-areas documents",
         "responses": {
           "200": {
-            "description": "Retrieve mis document(s)",
+            "description": "Retrieve thematic-areas document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Mis"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -359,7 +311,64 @@
         },
         "summary": "",
         "tags": [
-          "Mis"
+          "Thematic-areas"
+        ],
+        "parameters": []
+      }
+    },
+    "/thematic-areas/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "Find one thematic-areas record",
+        "responses": {
+          "200": {
+            "description": "Retrieve thematic-areas document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Thematic-areas"
         ],
         "parameters": [
           {
@@ -376,14 +385,18 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single mis record",
+        "description": "Update a single thematic-areas record",
         "responses": {
           "200": {
-            "description": "Retrieve mis document(s)",
+            "description": "Retrieve thematic-areas document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Mis"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -421,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Mis"
+          "Thematic-areas"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewMis"
+                "$ref": "#/components/schemas/NewThematic-areas"
               }
             }
           }
@@ -449,10 +462,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single mis record",
+        "description": "Delete a single thematic-areas record",
         "responses": {
           "200": {
-            "description": "deletes a single mis based on the ID supplied",
+            "description": "deletes a single thematic-areas based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Mis"
+          "Thematic-areas"
         ],
         "parameters": [
           {
@@ -514,240 +527,22 @@
   },
   "components": {
     "schemas": {
-      "Mis": {
+      "Thematic-areas": {
         "required": [
-          "id",
-          "Name"
+          "id"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "Name": {
+          "name": {
             "type": "string"
           },
-          "institution": {
-            "required": [
-              "id",
-              "Name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "Name": {
-                "type": "string"
-              },
-              "Mandate": {
-                "type": "string"
-              },
-              "Vision": {
-                "type": "string"
-              },
-              "Mission": {
-                "type": "string"
-              },
-              "mis": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "website": {
-                "type": "string"
-              },
-              "e_services": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "mobile_services": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "phone": {
-                "type": "string"
-              },
-              "proposed_systems": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "team": {
-                "type": "string"
-              },
-              "job_descriptions": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "sections": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "msites": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "Description": {
-            "type": "string"
-          },
-          "Launch": {
-            "type": "string",
-            "format": "date"
-          },
-          "Serial": {
-            "type": "string"
-          },
-          "Location": {
-            "type": "string"
-          },
-          "Platform": {
-            "type": "string"
-          },
-          "Developer": {
-            "type": "string"
-          },
-          "SourceCode": {
-            "type": "string"
-          },
-          "LicencingCost": {
-            "type": "number"
-          },
-          "AnnualRevenue": {
-            "type": "number"
-          },
-          "Users": {
-            "type": "integer"
-          },
-          "url": {
-            "type": "string"
-          },
-          "Access": {
-            "type": "string"
-          },
-          "ServiceType": {
-            "type": "string"
-          },
-          "SysType": {
-            "type": "string"
-          },
-          "Mobile": {
-            "type": "string"
-          },
-          "Status": {
-            "type": "string"
-          },
-          "e_services": {
+          "outcomes": {
             "type": "array",
             "items": {
               "required": [
                 "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "Name": {
-                  "type": "string"
-                },
-                "Description": {
-                  "type": "string"
-                },
-                "institution": {
-                  "type": "string"
-                },
-                "Status": {
-                  "type": "string",
-                  "enum": [
-                    "OPERATIONAL",
-                    "OFFLINE",
-                    "PAPERBASED"
-                  ]
-                },
-                "url": {
-                  "type": "string"
-                },
-                "mi": {
-                  "type": "string"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "documentations": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "Name": {
-                  "type": "string"
-                },
-                "mi": {
-                  "type": "string"
-                },
-                "Category": {
-                  "type": "string"
-                },
-                "DocId": {
-                  "type": "integer"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "doc": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "hash",
-                "mime",
-                "size",
-                "url",
-                "provider"
               ],
               "properties": {
                 "id": {
@@ -756,46 +551,10 @@
                 "name": {
                   "type": "string"
                 },
-                "alternativeText": {
+                "thematic_area": {
                   "type": "string"
                 },
-                "caption": {
-                  "type": "string"
-                },
-                "width": {
-                  "type": "integer"
-                },
-                "height": {
-                  "type": "integer"
-                },
-                "formats": {
-                  "type": "object"
-                },
-                "hash": {
-                  "type": "string"
-                },
-                "ext": {
-                  "type": "string"
-                },
-                "mime": {
-                  "type": "string"
-                },
-                "size": {
-                  "type": "number"
-                },
-                "url": {
-                  "type": "string"
-                },
-                "previewUrl": {
-                  "type": "string"
-                },
-                "provider": {
-                  "type": "string"
-                },
-                "provider_metadata": {
-                  "type": "object"
-                },
-                "related": {
+                "published_at": {
                   "type": "string"
                 },
                 "created_by": {
@@ -807,53 +566,37 @@
               }
             }
           },
-          "ProjectOwner": {
-            "type": "string"
-          },
-          "Agency": {
-            "required": [
-              "id",
-              "Name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "Name": {
-                "type": "string"
-              },
-              "URL": {
-                "type": "string"
-              },
-              "Address": {
-                "type": "string"
-              },
-              "Phone": {
-                "type": "string"
-              },
-              "Services": {
-                "type": "array",
-                "items": {
+          "output_targets": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "thematic_area": {
+                  "type": "string"
+                },
+                "activities": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
                   "type": "string"
                 }
-              },
-              "Ministry": {
-                "type": "string"
-              },
-              "Mis": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
               }
             }
           },
@@ -863,83 +606,22 @@
           }
         }
       },
-      "NewMis": {
-        "required": [
-          "Name"
-        ],
+      "NewThematic-areas": {
         "properties": {
-          "Name": {
+          "name": {
             "type": "string"
           },
-          "institution": {
-            "type": "string"
-          },
-          "Description": {
-            "type": "string"
-          },
-          "Launch": {
-            "type": "string",
-            "format": "date"
-          },
-          "Serial": {
-            "type": "string"
-          },
-          "Location": {
-            "type": "string"
-          },
-          "Platform": {
-            "type": "string"
-          },
-          "Developer": {
-            "type": "string"
-          },
-          "SourceCode": {
-            "type": "string"
-          },
-          "LicencingCost": {
-            "type": "number"
-          },
-          "AnnualRevenue": {
-            "type": "number"
-          },
-          "Users": {
-            "type": "integer"
-          },
-          "url": {
-            "type": "string"
-          },
-          "Access": {
-            "type": "string"
-          },
-          "ServiceType": {
-            "type": "string"
-          },
-          "SysType": {
-            "type": "string"
-          },
-          "Mobile": {
-            "type": "string"
-          },
-          "Status": {
-            "type": "string"
-          },
-          "e_services": {
+          "outcomes": {
             "type": "array",
             "items": {
               "type": "string"
             }
           },
-          "documentations": {
+          "output_targets": {
             "type": "array",
             "items": {
               "type": "string"
             }
-          },
-          "ProjectOwner": {
-            "type": "string"
-          },
-          "Agency": {
-            "type": "string"
           },
           "published_at": {
             "type": "string",
@@ -955,9 +637,5 @@
       }
     }
   },
-  "tags": [
-    {
-      "name": "Mis"
-    }
-  ]
+  "tags": []
 }

@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "output_targets",
+  "info": {
+    "name": "OutputTargets",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "thematic_area": {
+      "model": "thematic-areas",
+      "via": "output_targets"
+    },
+    "activities": {
+      "via": "output_target",
+      "collection": "activities"
+    }
+  }
+}

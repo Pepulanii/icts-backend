@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "activities",
+  "info": {
+    "name": "Activities",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "output_target": {
+      "model": "output-targets",
+      "via": "activities"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "Pending",
+        "Underway",
+        "Completed"
+      ]
+    },
+    "responsible": {
+      "type": "string"
+    },
+    "duedate": {
+      "type": "date"
+    },
+    "comments": {
+      "type": "richtext"
+    }
+  }
+}
