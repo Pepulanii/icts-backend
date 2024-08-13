@@ -629,7 +629,8 @@
             "default": "OPERATIONAL",
             "enum": [
               "OPERATIONAL",
-              "OFFLINE"
+              "OFFLINE",
+              "PAPERBASED"
             ]
           },
           "url": {
@@ -755,7 +756,8 @@
             "default": "OPERATIONAL",
             "enum": [
               "OPERATIONAL",
-              "OFFLINE"
+              "OFFLINE",
+              "PAPERBASED"
             ]
           },
           "url": {

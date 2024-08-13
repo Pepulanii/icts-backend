@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "07/07/2024 6:14:12 PM"
+    "x-generation-date": "08/13/2024 11:53:08 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -18371,7 +18371,8 @@
             "default": "OPERATIONAL",
             "enum": [
               "OPERATIONAL",
-              "OFFLINE"
+              "OFFLINE",
+              "PAPERBASED"
             ]
           },
           "url": {
@@ -18497,7 +18498,8 @@
             "default": "OPERATIONAL",
             "enum": [
               "OPERATIONAL",
-              "OFFLINE"
+              "OFFLINE",
+              "PAPERBASED"
             ]
           },
           "url": {
@@ -18863,7 +18865,8 @@
                   "type": "string",
                   "enum": [
                     "OPERATIONAL",
-                    "OFFLINE"
+                    "OFFLINE",
+                    "PAPERBASED"
                   ]
                 },
                 "url": {
@@ -20047,7 +20050,8 @@
                   "type": "string",
                   "enum": [
                     "OPERATIONAL",
-                    "OFFLINE"
+                    "OFFLINE",
+                    "PAPERBASED"
                   ]
                 },
                 "url": {

@@ -681,7 +681,8 @@
                   "type": "string",
                   "enum": [
                     "OPERATIONAL",
-                    "OFFLINE"
+                    "OFFLINE",
+                    "PAPERBASED"
                   ]
                 },
                 "url": {

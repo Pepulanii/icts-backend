@@ -26,7 +26,8 @@
       "type": "enumeration",
       "enum": [
         "OPERATIONAL",
-        "OFFLINE"
+        "OFFLINE",
+        "PAPERBASED"
       ],
       "default": "OPERATIONAL"
     },
