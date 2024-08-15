@@ -94,6 +94,9 @@
     "Agency": {
       "via": "Mis",
       "model": "agency"
+    },
+    "provisionMode": {
+      "type": "string"
     }
   }
 }

@@ -723,6 +723,9 @@
               "Agency": {
                 "type": "string"
               },
+              "provisionMode": {
+                "type": "string"
+              },
               "published_at": {
                 "type": "string"
               },

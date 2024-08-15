@@ -857,6 +857,9 @@
               }
             }
           },
+          "provisionMode": {
+            "type": "string"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -939,6 +942,9 @@
             "type": "string"
           },
           "Agency": {
+            "type": "string"
+          },
+          "provisionMode": {
             "type": "string"
           },
           "published_at": {

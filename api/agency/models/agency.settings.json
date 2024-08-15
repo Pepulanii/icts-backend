@@ -34,8 +34,8 @@
       "model": "ministries"
     },
     "Mis": {
-      "collection": "mis",
-      "via": "Agency"
+      "via": "Agency",
+      "collection": "mis"
     }
   }
 }
