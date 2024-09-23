@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/activities": {
+    "/milestones": {
       "get": {
         "deprecated": false,
-        "description": "Find all the activities's records",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve activities document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Activities"
+                    "$ref": "#/components/schemas/Milestone"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Activities"
+          "Milestone"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new activities record",
+        "description": "Create a new record",
         "responses": {
           "200": {
-            "description": "Retrieve activities document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Activities"
+                  "$ref": "#/components/schemas/Milestone"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Activities"
+          "Milestone"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewActivities"
+                "$ref": "#/components/schemas/NewMilestone"
               }
             }
           }
         }
       }
     },
-    "/activities/count": {
+    "/milestones/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the number of activities documents",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve activities document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Activities"
+          "Milestone"
         ],
         "parameters": []
       }
     },
-    "/activities/{id}": {
+    "/milestones/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one activities record",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve activities document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Activities"
+                  "$ref": "#/components/schemas/Milestone"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Activities"
+          "Milestone"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single activities record",
+        "description": "Update a record",
         "responses": {
           "200": {
-            "description": "Retrieve activities document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Activities"
+                  "$ref": "#/components/schemas/Milestone"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Activities"
+          "Milestone"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewActivities"
+                "$ref": "#/components/schemas/NewMilestone"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single activities record",
+        "description": "Delete a record",
         "responses": {
           "200": {
-            "description": "deletes a single activities based on the ID supplied",
+            "description": "deletes a single record based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Activities"
+          "Milestone"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Activities": {
+      "Milestone": {
         "required": [
           "id"
         ],
@@ -522,10 +522,17 @@
           "id": {
             "type": "string"
           },
-          "name": {
+          "Description": {
             "type": "string"
           },
-          "output_target": {
+          "Completed": {
+            "type": "boolean"
+          },
+          "CompletedBy": {
+            "type": "string",
+            "format": "date"
+          },
+          "activity": {
             "required": [
               "id"
             ],
@@ -536,10 +543,27 @@
               "name": {
                 "type": "string"
               },
-              "thematic_area": {
+              "output_target": {
                 "type": "string"
               },
-              "activities": {
+              "status": {
+                "type": "string",
+                "enum": [
+                  "Pending",
+                  "Underway",
+                  "Completed"
+                ]
+              },
+              "responsible": {
+                "type": "string"
+              },
+              "duedate": {
+                "type": "string"
+              },
+              "comments": {
+                "type": "string"
+              },
+              "milestones": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -556,95 +580,26 @@
               }
             }
           },
-          "status": {
-            "type": "string",
-            "enum": [
-              "Pending",
-              "Underway",
-              "Completed"
-            ]
-          },
-          "responsible": {
-            "type": "string"
-          },
-          "duedate": {
-            "type": "string",
-            "format": "date"
-          },
-          "comments": {
-            "type": "string"
-          },
-          "milestones": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "Description": {
-                  "type": "string"
-                },
-                "Completed": {
-                  "type": "boolean"
-                },
-                "CompletedBy": {
-                  "type": "string"
-                },
-                "activity": {
-                  "type": "string"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
           "published_at": {
             "type": "string",
             "format": "date-time"
           }
         }
       },
-      "NewActivities": {
+      "NewMilestone": {
         "properties": {
-          "name": {
+          "Description": {
             "type": "string"
           },
-          "output_target": {
-            "type": "string"
+          "Completed": {
+            "type": "boolean"
           },
-          "status": {
-            "type": "string",
-            "enum": [
-              "Pending",
-              "Underway",
-              "Completed"
-            ]
-          },
-          "responsible": {
-            "type": "string"
-          },
-          "duedate": {
+          "CompletedBy": {
             "type": "string",
             "format": "date"
           },
-          "comments": {
+          "activity": {
             "type": "string"
-          },
-          "milestones": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
           },
           "published_at": {
             "type": "string",
@@ -662,7 +617,7 @@
   },
   "tags": [
     {
-      "name": "Activities"
+      "name": "Milestone"
     }
   ]
 }

@@ -605,6 +605,12 @@
                 "comments": {
                   "type": "string"
                 },
+                "milestones": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
                 "published_at": {
                   "type": "string"
                 },
