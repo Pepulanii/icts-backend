@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/mis": {
+    "/milestones": {
       "get": {
         "deprecated": false,
-        "description": "Find all the mis's records",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve mis document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Mis"
+                    "$ref": "#/components/schemas/Milestone"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Mis"
+          "Milestone"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new mis record",
+        "description": "Create a new record",
         "responses": {
           "200": {
-            "description": "Retrieve mis document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Mis"
+                  "$ref": "#/components/schemas/Milestone"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Mis"
+          "Milestone"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewMis"
+                "$ref": "#/components/schemas/NewMilestone"
               }
             }
           }
         }
       }
     },
-    "/mis/count": {
+    "/milestones/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the number of mis documents",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve mis document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Mis"
+          "Milestone"
         ],
         "parameters": []
       }
     },
-    "/mis/{id}": {
+    "/milestones/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one mis record",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve mis document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Mis"
+                  "$ref": "#/components/schemas/Milestone"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Mis"
+          "Milestone"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single mis record",
+        "description": "Update a record",
         "responses": {
           "200": {
-            "description": "Retrieve mis document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Mis"
+                  "$ref": "#/components/schemas/Milestone"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Mis"
+          "Milestone"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewMis"
+                "$ref": "#/components/schemas/NewMilestone"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single mis record",
+        "description": "Delete a record",
         "responses": {
           "200": {
-            "description": "deletes a single mis based on the ID supplied",
+            "description": "deletes a single record based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Mis"
+          "Milestone"
         ],
         "parameters": [
           {
@@ -514,331 +514,56 @@
   },
   "components": {
     "schemas": {
-      "Mis": {
+      "Milestone": {
         "required": [
-          "id",
-          "Name"
+          "id"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "Name": {
-            "type": "string"
-          },
-          "institution": {
-            "required": [
-              "id",
-              "Name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "Name": {
-                "type": "string"
-              },
-              "Mandate": {
-                "type": "string"
-              },
-              "Vision": {
-                "type": "string"
-              },
-              "Mission": {
-                "type": "string"
-              },
-              "mis": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "website": {
-                "type": "string"
-              },
-              "e_services": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "mobile_services": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "phone": {
-                "type": "string"
-              },
-              "proposed_systems": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "team": {
-                "type": "string"
-              },
-              "job_descriptions": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "sections": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "msites": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
           "Description": {
             "type": "string"
           },
-          "Launch": {
+          "Completed": {
+            "type": "boolean"
+          },
+          "CompletedBy": {
             "type": "string",
             "format": "date"
           },
-          "Serial": {
-            "type": "string"
-          },
-          "Location": {
-            "type": "string"
-          },
-          "Platform": {
-            "type": "string"
-          },
-          "Developer": {
-            "type": "string"
-          },
-          "SourceCode": {
-            "type": "string"
-          },
-          "LicencingCost": {
-            "type": "number"
-          },
-          "AnnualRevenue": {
-            "type": "number"
-          },
-          "Users": {
-            "type": "integer"
-          },
-          "url": {
-            "type": "string"
-          },
-          "Access": {
-            "type": "string"
-          },
-          "ServiceType": {
-            "type": "string"
-          },
-          "SysType": {
-            "type": "string"
-          },
-          "Mobile": {
-            "type": "string"
-          },
-          "Status": {
-            "type": "string"
-          },
-          "e_services": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "Name": {
-                  "type": "string"
-                },
-                "Description": {
-                  "type": "string"
-                },
-                "institution": {
-                  "type": "string"
-                },
-                "url": {
-                  "type": "string"
-                },
-                "mi": {
-                  "type": "string"
-                },
-                "Status": {
-                  "type": "string"
-                },
-                "gsbStatus": {
-                  "type": "string"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "documentations": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "Name": {
-                  "type": "string"
-                },
-                "mi": {
-                  "type": "string"
-                },
-                "Category": {
-                  "type": "string"
-                },
-                "DocId": {
-                  "type": "integer"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "doc": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "hash",
-                "mime",
-                "size",
-                "url",
-                "provider"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "alternativeText": {
-                  "type": "string"
-                },
-                "caption": {
-                  "type": "string"
-                },
-                "width": {
-                  "type": "integer"
-                },
-                "height": {
-                  "type": "integer"
-                },
-                "formats": {
-                  "type": "object"
-                },
-                "hash": {
-                  "type": "string"
-                },
-                "ext": {
-                  "type": "string"
-                },
-                "mime": {
-                  "type": "string"
-                },
-                "size": {
-                  "type": "number"
-                },
-                "url": {
-                  "type": "string"
-                },
-                "previewUrl": {
-                  "type": "string"
-                },
-                "provider": {
-                  "type": "string"
-                },
-                "provider_metadata": {
-                  "type": "object"
-                },
-                "related": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "ProjectOwner": {
-            "type": "string"
-          },
-          "Agency": {
+          "activity": {
             "required": [
-              "id",
-              "Name"
+              "id"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "Name": {
+              "name": {
                 "type": "string"
               },
-              "URL": {
+              "output_target": {
                 "type": "string"
               },
-              "Address": {
+              "status": {
+                "type": "string",
+                "enum": [
+                  "Pending",
+                  "Underway",
+                  "Completed"
+                ]
+              },
+              "responsible": {
                 "type": "string"
               },
-              "Phone": {
+              "duedate": {
                 "type": "string"
               },
-              "Services": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "Ministry": {
+              "comments": {
                 "type": "string"
               },
-              "Mis": {
+              "milestones": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -854,12 +579,6 @@
                 "type": "string"
               }
             }
-          },
-          "provisionMode": {
-            "type": "string"
-          },
-          "agencytxt": {
-            "type": "string"
           },
           "published_at": {
             "type": "string",
@@ -867,88 +586,19 @@
           }
         }
       },
-      "NewMis": {
-        "required": [
-          "Name"
-        ],
+      "NewMilestone": {
         "properties": {
-          "Name": {
-            "type": "string"
-          },
-          "institution": {
-            "type": "string"
-          },
           "Description": {
             "type": "string"
           },
-          "Launch": {
+          "Completed": {
+            "type": "boolean"
+          },
+          "CompletedBy": {
             "type": "string",
             "format": "date"
           },
-          "Serial": {
-            "type": "string"
-          },
-          "Location": {
-            "type": "string"
-          },
-          "Platform": {
-            "type": "string"
-          },
-          "Developer": {
-            "type": "string"
-          },
-          "SourceCode": {
-            "type": "string"
-          },
-          "LicencingCost": {
-            "type": "number"
-          },
-          "AnnualRevenue": {
-            "type": "number"
-          },
-          "Users": {
-            "type": "integer"
-          },
-          "url": {
-            "type": "string"
-          },
-          "Access": {
-            "type": "string"
-          },
-          "ServiceType": {
-            "type": "string"
-          },
-          "SysType": {
-            "type": "string"
-          },
-          "Mobile": {
-            "type": "string"
-          },
-          "Status": {
-            "type": "string"
-          },
-          "e_services": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "documentations": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "ProjectOwner": {
-            "type": "string"
-          },
-          "Agency": {
-            "type": "string"
-          },
-          "provisionMode": {
-            "type": "string"
-          },
-          "agencytxt": {
+          "activity": {
             "type": "string"
           },
           "published_at": {
@@ -967,7 +617,7 @@
   },
   "tags": [
     {
-      "name": "Mis"
+      "name": "Milestone"
     }
   ]
 }

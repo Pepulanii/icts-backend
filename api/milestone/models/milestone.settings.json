@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "milestone",
+  "info": {
+    "name": "Milestone"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Description": {
+      "type": "text"
+    },
+    "Completed": {
+      "type": "boolean"
+    },
+    "CompletedBy": {
+      "type": "date"
+    },
+    "activity": {
+      "via": "milestones",
+      "model": "activities"
+    }
+  }
+}

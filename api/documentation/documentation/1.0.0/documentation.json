@@ -615,6 +615,9 @@
               "provisionMode": {
                 "type": "string"
               },
+              "agencytxt": {
+                "type": "string"
+              },
               "published_at": {
                 "type": "string"
               },

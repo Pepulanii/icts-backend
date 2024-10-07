@@ -35,6 +35,10 @@
     },
     "comments": {
       "type": "richtext"
+    },
+    "milestones": {
+      "collection": "milestone",
+      "via": "activity"
     }
   }
 }

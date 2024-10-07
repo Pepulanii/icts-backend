@@ -624,15 +624,6 @@
               }
             }
           },
-          "Status": {
-            "type": "string",
-            "default": "OPERATIONAL",
-            "enum": [
-              "OPERATIONAL",
-              "OFFLINE",
-              "PAPERBASED"
-            ]
-          },
           "url": {
             "type": "string"
           },
@@ -726,6 +717,9 @@
               "provisionMode": {
                 "type": "string"
               },
+              "agencytxt": {
+                "type": "string"
+              },
               "published_at": {
                 "type": "string"
               },
@@ -736,6 +730,12 @@
                 "type": "string"
               }
             }
+          },
+          "Status": {
+            "type": "string"
+          },
+          "gsbStatus": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",
@@ -754,19 +754,16 @@
           "institution": {
             "type": "string"
           },
-          "Status": {
-            "type": "string",
-            "default": "OPERATIONAL",
-            "enum": [
-              "OPERATIONAL",
-              "OFFLINE",
-              "PAPERBASED"
-            ]
-          },
           "url": {
             "type": "string"
           },
           "mi": {
+            "type": "string"
+          },
+          "Status": {
+            "type": "string"
+          },
+          "gsbStatus": {
             "type": "string"
           },
           "published_at": {

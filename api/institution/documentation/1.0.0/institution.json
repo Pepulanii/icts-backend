@@ -627,6 +627,9 @@
                 "provisionMode": {
                   "type": "string"
                 },
+                "agencytxt": {
+                  "type": "string"
+                },
                 "published_at": {
                   "type": "string"
                 },
@@ -661,18 +664,16 @@
                 "institution": {
                   "type": "string"
                 },
-                "Status": {
-                  "type": "string",
-                  "enum": [
-                    "OPERATIONAL",
-                    "OFFLINE",
-                    "PAPERBASED"
-                  ]
-                },
                 "url": {
                   "type": "string"
                 },
                 "mi": {
+                  "type": "string"
+                },
+                "Status": {
+                  "type": "string"
+                },
+                "gsbStatus": {
                   "type": "string"
                 },
                 "published_at": {

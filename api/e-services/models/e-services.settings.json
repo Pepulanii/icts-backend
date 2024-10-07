@@ -22,21 +22,18 @@
       "via": "e_services",
       "model": "institution"
     },
-    "Status": {
-      "type": "enumeration",
-      "enum": [
-        "OPERATIONAL",
-        "OFFLINE",
-        "PAPERBASED"
-      ],
-      "default": "OPERATIONAL"
-    },
     "url": {
       "type": "string"
     },
     "mi": {
       "via": "e_services",
       "model": "mis"
+    },
+    "Status": {
+      "type": "string"
+    },
+    "gsbStatus": {
+      "type": "string"
     }
   }
 }
