@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "key_results",
+  "info": {
+    "name": "KeyResult",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "keyResult": {
+      "type": "string"
+    },
+    "targets": {
+      "via": "key_result",
+      "collection": "target"
+    }
+  }
+}

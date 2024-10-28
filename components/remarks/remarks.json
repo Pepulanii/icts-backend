@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_remarks_remarks",
+  "info": {
+    "name": "remarks",
+    "icon": "address-book",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "remarks": {
+      "type": "string"
+    }
+  }
+}

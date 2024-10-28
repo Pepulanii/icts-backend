@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "targets",
+  "info": {
+    "name": "Targets",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "target": {
+      "type": "string"
+    },
+    "actual": {
+      "type": "string"
+    },
+    "verification": {
+      "type": "string"
+    },
+    "keyResult": {
+      "type": "string"
+    },
+    "key_result": {
+      "via": "targets",
+      "model": "key-result"
+    },
+    "quarter": {
+      "type": "integer",
+      "max": 4,
+      "min": 1
+    },
+    "ratingQuarterOne": {
+      "type": "integer",
+      "max": 2,
+      "min": 1
+    },
+    "ratingQuarterTwo": {
+      "type": "integer",
+      "max": 3,
+      "min": 1
+    },
+    "ratingQuarterThree": {
+      "type": "integer",
+      "max": 3,
+      "min": 1
+    },
+    "ratingQuarterFour": {
+      "type": "integer",
+      "max": 3,
+      "min": 1
+    },
+    "remarks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "remarks.remarks"
+    }
+  }
+}
