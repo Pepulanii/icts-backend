@@ -39,6 +39,9 @@
     "milestones": {
       "collection": "milestone",
       "via": "activity"
+    },
+    "newot": {
+      "type": "string"
     }
   }
 }
