@@ -108,3 +108,5 @@ build
 .strapi-updater.json
 .nvmrc
 .temp/database.db
+.database.db
+*.sql
