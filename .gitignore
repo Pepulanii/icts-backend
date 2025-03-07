@@ -106,8 +106,5 @@ exports
 *.cache
 build
 .strapi-updater.json
-<<<<<<< HEAD
-.tmp/data.db
-=======
 .nvmrc
->>>>>>> 934ff4d56d294a2567d36bb7aecbe01c80b8d99b
+.temp/database.db
