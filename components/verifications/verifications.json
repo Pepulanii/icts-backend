@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_verifications_verifications",
+  "info": {
+    "name": "verifications",
+    "icon": "ambulance",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Verifications": {
+      "type": "string"
+    }
+  }
+}
